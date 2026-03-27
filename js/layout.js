@@ -33,8 +33,11 @@
                 const targetLang = isEn() ? 'es' : 'en';
                 const altLink = document.querySelector(`link[rel="alternate"][hreflang="${targetLang}"]`);
                 if (altLink) {
+                    const altPath = new URL(altLink.href).pathname;
                     const langSwitch = mount.querySelector('.lang-switch');
-                    if (langSwitch) langSwitch.href = new URL(altLink.href).pathname;
+                    if (langSwitch) langSwitch.href = altPath;
+                    const langSwitchMobile = mount.querySelector('.lang-switch-mobile');
+                    if (langSwitchMobile) langSwitchMobile.href = altPath;
                 }
 
                 // ── Mobile menu toggle ──────────────────────────────────────
