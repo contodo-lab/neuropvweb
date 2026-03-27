@@ -34,7 +34,8 @@
                 <a href="/contacto/">Contacto</a>
                 <a href="/en/" class="lang-switch"><span class="lang-flag">🇺🇸</span> EN</a>
             </nav>
-            <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+            <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú" aria-expanded="false"
+                aria-controls="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -47,23 +48,11 @@
                 <a href="#programas" class="mobile-nav-link">Programas</a>
                 <a href="/guias/" class="mobile-nav-link">Guías</a>
                 <a href="/contacto/" class="mobile-nav-link">Contacto</a>
-                <a href="/en/" class="mobile-nav-link lang-switch-mobile"><span class="lang-flag">🇺🇸</span> Switch to English</a>
+                <a href="/en/" class="mobile-nav-link lang-switch-mobile"><span class="lang-flag">🇺🇸</span> Switch to
+                    English</a>
             </nav>
         </div>
     </header>
-    <script>
-        (function () {
-            const btn  = document.getElementById('hamburger-btn');
-            const menu = document.getElementById('mobile-menu');
-            if (!btn || !menu) return;
-            const open  = () => { btn.classList.add('is-open'); menu.classList.add('is-open'); btn.setAttribute('aria-expanded','true'); menu.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; };
-            const close = () => { btn.classList.remove('is-open'); menu.classList.remove('is-open'); btn.setAttribute('aria-expanded','false'); menu.setAttribute('aria-hidden','true'); document.body.style.overflow=''; };
-            btn.addEventListener('click', () => btn.classList.contains('is-open') ? close() : open());
-            menu.querySelectorAll('.mobile-nav-link').forEach(l => l.addEventListener('click', close));
-            document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
-            window.addEventListener('resize', () => { if (window.innerWidth >= 768) close(); });
-        })();
-    </script>
 
     <!-- SECTION 1 — HERO -->
     <section class="hero">
@@ -83,7 +72,7 @@
                         <div style="font-size: 1.5rem; font-weight: 700; color: #fff;">800+</div>
                         <div
                             style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 4px;">
-                            Personas<br>Probadas</div>
+                            Personas<br>han testeado</div>
                     </div>
                     <svg class="laurel laurel-right" viewBox="0 0 24 44" height="40" fill="currentColor" opacity="0.8"
                         style="color: var(--accent-teal);">
@@ -373,6 +362,19 @@
     <div id="site-footer"></div>
     <script src="/js/layout.js"></script>
     <script src="/js/script.js"></script>
+    <script>
+        (function () {
+            const btn = document.getElementById('hamburger-btn');
+            const menu = document.getElementById('mobile-menu');
+            if (!btn || !menu) return;
+            const open = () => { btn.classList.add('is-open'); menu.classList.add('is-open'); btn.setAttribute('aria-expanded', 'true'); menu.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; };
+            const close = () => { btn.classList.remove('is-open'); menu.classList.remove('is-open'); btn.setAttribute('aria-expanded', 'false'); menu.setAttribute('aria-hidden', 'true'); document.body.style.overflow = ''; };
+            btn.addEventListener('click', () => btn.classList.contains('is-open') ? close() : open());
+            menu.querySelectorAll('.mobile-nav-link').forEach(l => l.addEventListener('click', close));
+            document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+            window.addEventListener('resize', () => { if (window.innerWidth >= 768) close(); });
+        })();
+    </script>
 </body>
 
 </html>
