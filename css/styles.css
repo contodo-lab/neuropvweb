@@ -62,6 +62,7 @@ h4 {
 .text-gradient {
     background: linear-gradient(135deg, #FFFFFF 0%, #A0A0A0 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -174,6 +175,122 @@ section {
 
 .lang-flag {
     font-size: 1.1rem;
+}
+
+/* ─── Hamburger Button ─── */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 200;
+    flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+.hamburger .bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text-primary);
+    border-radius: 2px;
+    transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1),
+                opacity 0.25s ease,
+                width 0.3s ease;
+    transform-origin: center;
+}
+
+/* Open state — animates into an X */
+.hamburger.is-open .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.hamburger.is-open .bar:nth-child(2) {
+    opacity: 0;
+    width: 0;
+}
+.hamburger.is-open .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ─── Mobile Menu Overlay ─── */
+.mobile-menu {
+    display: block;          /* controlled by max-height, not display */
+    max-height: 0;
+    overflow: hidden;
+    background: rgba(11, 11, 11, 0.97);
+    backdrop-filter: blur(16px);
+    border-top: 1px solid var(--border-color);
+    transition: max-height 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.mobile-menu.is-open {
+    max-height: 400px;
+}
+
+@media (min-width: 768px) {
+    .mobile-menu {
+        display: none;
+    }
+}
+
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0 1.5rem;
+}
+
+.mobile-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.9rem var(--space-sm);
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    font-weight: 500;
+    border-bottom: 1px solid var(--border-color);
+    transition: color 0.2s ease, background 0.2s ease;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: color 0.2s ease, background 0.2s ease,
+                opacity 0.3s ease, transform 0.3s ease;
+}
+
+.mobile-menu.is-open .mobile-nav-link {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger each link's fade-in */
+.mobile-menu.is-open .mobile-nav-link:nth-child(1) { transition-delay: 0.05s; }
+.mobile-menu.is-open .mobile-nav-link:nth-child(2) { transition-delay: 0.10s; }
+.mobile-menu.is-open .mobile-nav-link:nth-child(3) { transition-delay: 0.15s; }
+.mobile-menu.is-open .mobile-nav-link:nth-child(4) { transition-delay: 0.20s; }
+.mobile-menu.is-open .mobile-nav-link:nth-child(5) { transition-delay: 0.25s; }
+
+.mobile-nav-link:last-child {
+    border-bottom: none;
+}
+
+.mobile-nav-link:hover {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.lang-switch-mobile {
+    margin-top: 0.5rem;
+    color: var(--text-primary) !important;
 }
 
 /* Buttons */
@@ -312,6 +429,53 @@ section {
     gap: var(--space-sm);
     max-width: 600px;
     margin: 0 auto;
+}
+
+.modes-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    align-items: stretch;
+    /* Align items to stretch so image and cards match height */
+}
+
+@media (min-width: 992px) {
+    .modes-wrapper {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+}
+
+.modes-visual {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    /* For mobile since they stack, give it a specific height */
+    min-height: 300px;
+}
+
+@media (min-width: 992px) {
+    .modes-visual {
+        min-height: 0;
+        height: 100%;
+        /* Will stretch exactly to match the cards */
+    }
+}
+
+.modes-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Keeps zoom on the headphones without affecting the box height */
+    object-position: 15% 50%;
+    transform: scale(1.2);
+    transform-origin: 25% 50%;
+    transition: transform 0.5s ease;
 }
 
 .mode-card {
@@ -454,9 +618,30 @@ section {
 /* Testimonials / Quotes */
 .testimonials {
     background-color: var(--bg-surface);
+    background-image: url('/assets/img/testimonials-bg.webp');
+    /* Add your image here */
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
     text-align: center;
-    border-top: 1px solid var(--border-color);
+    /* border-top: 1px solid var(--border-color); */
     border-bottom: 1px solid var(--border-color);
+    position: relative;
+    z-index: 1;
+    /* Keep content above overlay */
+}
+
+/* Add a dark gradient overlay so the text remains easy to read */
+.testimonials::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Fades from dark surface to slightly transparent center, back to dark */
+    background: linear-gradient(180deg, var(--bg-surface) 0%, rgba(18, 18, 18, 0.4) 50%, var(--bg-surface) 100%);
+    z-index: -1;
 }
 
 .stars {

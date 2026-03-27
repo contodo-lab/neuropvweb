@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="robots" content="index, follow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="NeuroSinc ha demostrado reducir niveles de cortisol entre un 10% y un 40% en pruebas controladas. Reduce el cortisol de forma real, no solo percibida.">
+    <title>Cómo bajar el cortisol alto | NeuroSinc</title>
+
+    <link rel="canonical" href="https://neurosinc.com/como-bajar-el-cortisol/" />
+    <link rel="alternate" hreflang="es" href="https://neurosinc.com/como-bajar-el-cortisol/" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" type="image/png" href="/assets/img/logo-icon.png">
+
+    <style>
+        /* Cortisol Page Styles */
+        .cortisol-hero {
+            min-height: 110vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 100px;
+            padding-bottom: 4rem;
+            position: relative;
+            background-color: var(--bg-color);
+            background-image: url('/assets/img/hero-bg.png');
+            background-size: cover;
+            background-position: center bottom;
+        }
+
+        .cortisol-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(11, 11, 11, 0.4) 0%, rgba(11, 11, 11, 0.98) 100%);
+            z-index: 0;
+        }
+
+        .content-block {
+            padding: 5rem 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content-block h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.03em;
+        }
+
+        .content-block p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .c-block-accent {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 4rem 2rem;
+            margin: 4rem auto;
+            max-width: 900px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+
+        .proof-bullets {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .proof-bullets li {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .proof-bullets li::before {
+            content: "✓";
+            color: var(--accent-teal);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .comp-card {
+            background: var(--bg-card);
+            padding: 2.5rem 2rem;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .comp-card h3 {
+            color: var(--accent-teal);
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .testimonial-block {
+            font-size: 1.5rem;
+            font-style: italic;
+            text-align: center;
+            color: var(--text-primary);
+            max-width: 800px;
+            margin: 6rem auto;
+            position: relative;
+            padding: 0 1rem;
+        }
+
+        .testimonial-block::before {
+            content: '"';
+            font-size: 5rem;
+            color: var(--accent-teal);
+            opacity: 0.2;
+            position: absolute;
+            top: -3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            line-height: 1;
+        }
+
+        .final-cta {
+            text-align: center;
+            padding: 6rem 1rem;
+            background: linear-gradient(180deg, var(--bg-color) 0%, var(--bg-surface) 100%);
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="site-header"></div>
+
+    <!-- 1. HERO -->
+    <section class="cortisol-hero">
+        <div class="container fade-in-up visible" style="position:relative; z-index:1; max-width: 900px;">
+            <div class="laurel-badges-container"
+                style="display: flex; gap: 2rem; justify-content: center; margin-bottom: 2.5rem; flex-wrap: wrap;">
+                <div class="laurel-badge" style="display: flex; align-items: center; gap: 0.5rem;">
+                    <svg class="laurel laurel-left" viewBox="0 0 24 44" height="40" fill="currentColor" opacity="0.8"
+                        style="color: #3b82f6;">
+                        <path
+                            d="M17.6 42 C11.5 35 7.8 25 9.1 14.5 C7 14.8 5 13 4.2 11.2 C4.9 8.2 8.4 8.7 9.8 11.5 C10.2 8 11 5 13.5 2 C15 3.5 15.5 5.5 14 7 C16.5 6 19 8 18.5 10.5 C16 11 14 9.5 12.5 8 C12 11.5 13 14 16.2 14.8 C18.5 15 19 18 17.5 19.5 C14.2 18.5 13 17 12 15 C11 19 13.5 22 18 22 C20 23 20 26 18 28 C14 26 12 24.5 11 21 C10 26 12.5 30 18 31 C20 32 20 35 18 37 C13 34 11 31 10.5 27 C10 33 13.5 38 18.5 40 Z" />
+                    </svg>
+                    <div class="badge-content" style="text-align: center; line-height: 1.1;">
+                        <div style="font-size: 1.2rem; font-weight: 700; color: #fff;">+800 personas</div>
+                        <div
+                            style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; margin-top: 4px; letter-spacing: 0.05em;">
+                            2 años en lab</div>
+                    </div>
+                    <svg class="laurel laurel-right" viewBox="0 0 24 44" height="40" fill="currentColor" opacity="0.8"
+                        style="color: var(--accent-teal);">
+                        <path
+                            d="M6.4 42 C12.5 35 16.2 25 14.9 14.5 C17 14.8 19 13 19.8 11.2 C19.1 8.2 15.6 8.7 14.2 11.5 C13.8 8 13 5 10.5 2 C9 3.5 8.5 5.5 10 7 C7.5 6 5 8 5.5 10.5 C8 11 10 9.5 11.5 8 C12 11.5 11 14 7.8 14.8 C5.5 15 5 18 6.5 19.5 C9.8 18.5 11 17 12 15 C13 19 10.5 22 6 22 C4 23 4 26 6 28 C10 26 12 24.5 13 21 C14 26 11.5 30 6 31 C4 32 4 35 6 37 C11 34 13 31 13.5 27 C14 33 10.5 38 5.5 40 Z" />
+                    </svg>
+                </div>
+            </div>
+
+            <h1 class="text-gradient"
+                style="font-size: clamp(2.8rem, 6vw, 4.5rem); letter-spacing: -0.05em; line-height: 1.1; margin-bottom: 1.5rem; font-weight: 700;">
+                Reduce el cortisol de forma real, no solo percibida
+            </h1>
+
+            <p
+                style="font-size: 1.35rem; color: var(--text-secondary); max-width: 700px; margin: 0 auto 3.5rem auto; line-height: 1.6; font-weight: 400;">
+                NeuroSinc ha demostrado reducir niveles de cortisol entre un 10% y un 40% en pruebas controladas.
+            </p>
+
+            <a href="/#como-funciona" class="btn btn-primary" style="padding: 1.2rem 3rem; font-size: 1.1rem;">Explorar
+                NeuroSinc</a>
+        </div>
+    </section>
+
+    <!-- 2. PROBLEMA -->
+    <section class="content-block text-center fade-in-up" style="max-width: 700px;">
+        <h2 class="text-gradient">El estrés no es solo mental</h2>
+        <p style="font-size: 1.3rem;">El cortisol es la principal hormona del estrés.</p>
+        <p>Cuando se mantiene alto: <strong>afecta el sueño</strong>, <strong>reduce tu concentración</strong> y
+            <strong>mantiene tu mente en estado de alerta</strong> constante.</p>
+        <p style="color: var(--text-primary); font-size: 1.4rem; font-weight: 500; margin-top: 2rem;">👉 No es solo cómo
+            te sientes. Es lo que pasa en tu cuerpo.</p>
+    </section>
+
+    <!-- 3. PRUEBA -->
+    <section class="container fade-in-up">
+        <div class="c-block-accent">
+            <h2 class="text-gradient">Medido, no solo sentido</h2>
+            <ul class="proof-bullets">
+                <li>Pruebas en laboratorio durante más de 2 años</li>
+                <li>Más de 800 personas evaluadas</li>
+                <li>Reducción de cortisol entre 10% y 40%</li>
+            </ul>
+            <p
+                style="color: var(--accent-teal); font-size: 1.2rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 1rem;">
+                Resultados fisiológicos reales,<br>no solo percepción
+            </p>
+        </div>
+    </section>
+
+    <!-- 4. POR QUÉ FUNCIONA -->
+    <section class="content-block text-center fade-in-up" style="max-width: 800px;">
+        <h2>Cómo influye en tu estado mental</h2>
+        <p>NeuroSinc utiliza patrones de sonido diseñados para interactuar con la actividad de tu cerebro, facilitando
+            la transición hacia estados de calma, foco o descanso.</p>
+        <div
+            style="font-size: 1.5rem; font-weight: 600; color: var(--text-primary); margin-top: 2.5rem; display: flex; flex-direction: column; gap: 0.75rem;">
+            <span>👉 No es música.</span>
+            <span class="text-gradient">👉 Es estimulación dirigida.</span>
+        </div>
+    </section>
+
+    <!-- 5. POR QUÉ OTRAS COSAS NO FUNCIONAN -->
+    <section class="content-block fade-in-up">
+        <h2 class="text-center">No todas las soluciones actúan igual</h2>
+        <div class="comparison-grid">
+            <div class="comp-card">
+                <h3>Meditación</h3>
+                <p>Requiere práctica constante, esfuerzo mental y disciplina para lograr resultados reales y duraderos.
+                </p>
+            </div>
+            <div class="comp-card">
+                <h3>Apps / Música</h3>
+                <p>No generan el mismo efecto neurofisiológico al no estar calibradas con los ritmos cerebrales
+                    correctos.</p>
+            </div>
+            <div class="comp-card" style="grid-column: 1 / -1; max-width: 600px; margin: 0 auto; width: 100%;">
+                <h3>Audífonos normales</h3>
+                <p>No están diseñados para entregar y procesar el espectro de frecuencias profundas que esta
+                    estimulación requiere.</p>
+            </div>
+        </div>
+        <p class="text-center text-gradient" style="font-size: 1.5rem; font-weight: 600; margin-top: 3rem;">
+            NeuroSinc trabaja directamente con el cerebro.
+        </p>
+    </section>
+
+    <!-- 6. RESULTADOS -->
+    <section class="container fade-in-up">
+        <div class="c-block-accent" style="padding: 4rem 1rem;">
+            <h2>Lo que puedes experimentar</h2>
+            <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin: 3rem 0;">
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); padding: 2rem 1.5rem; border-radius: 16px; min-width: 220px; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🌊</div>
+                    <div style="font-weight: 500; font-size: 1.15rem;">Sensación de<br>calma real</div>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); padding: 2rem 1.5rem; border-radius: 16px; min-width: 220px; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🧠</div>
+                    <div style="font-weight: 500; font-size: 1.15rem;">Mente menos<br>acelerada</div>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); padding: 2rem 1.5rem; border-radius: 16px; min-width: 220px; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">👁️</div>
+                    <div style="font-weight: 500; font-size: 1.15rem;">Mayor claridad<br>mental</div>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); padding: 2rem 1.5rem; border-radius: 16px; min-width: 220px; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🌙</div>
+                    <div style="font-weight: 500; font-size: 1.15rem;">Transición más<br>fácil al descanso</div>
+                </div>
+            </div>
+            <p style="font-size: 1.4rem; font-style: italic; color: var(--accent-teal); margin-top: 1rem;">
+                “Como bajar revoluciones en minutos”
+            </p>
+        </div>
+    </section>
+
+    <!-- 7. TESTIMONIO -->
+    <section class="testimonial-block fade-in-up">
+        <p>“Sentí cómo mi mente se calmó sin esfuerzo. Es lo más cercano a cuando logro meditar bien, pero en minutos.”
+        </p>
+    </section>
+
+    <!-- 8. PRODUCTO -->
+    <section class="content-block text-center fade-in-up">
+        <h2>Todo integrado en un solo sistema</h2>
+        <p style="font-size: 1.3rem;">NeuroSinc combina:</p>
+
+        <div
+            style="display: flex; flex-direction: column; gap: 1rem; max-width: 450px; margin: 3rem auto; text-align: left;">
+            <div
+                style="display: flex; align-items: center; gap: 1.25rem; background: var(--bg-surface); padding: 1.25rem 1.5rem; border-radius: 12px; border: 1px solid var(--border-color);">
+                <span
+                    style="background: rgba(0, 194, 178, 0.1); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: var(--accent-teal); font-size: 1.25rem; flex-shrink: 0;">⚡</span>
+                <span style="font-weight: 500; font-size: 1.1rem; color: var(--text-primary);">Tecnología de
+                    neurosincronización</span>
+            </div>
+            <div
+                style="display: flex; align-items: center; gap: 1.25rem; background: var(--bg-surface); padding: 1.25rem 1.5rem; border-radius: 12px; border: 1px solid var(--border-color);">
+                <span
+                    style="background: rgba(0, 194, 178, 0.1); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: var(--accent-teal); font-size: 1.25rem; flex-shrink: 0;">🎧</span>
+                <span style="font-weight: 500; font-size: 1.1rem; color: var(--text-primary);">Hardware
+                    optimizado</span>
+            </div>
+            <div
+                style="display: flex; align-items: center; gap: 1.25rem; background: var(--bg-surface); padding: 1.25rem 1.5rem; border-radius: 12px; border: 1px solid var(--border-color);">
+                <span
+                    style="background: rgba(0, 194, 178, 0.1); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: var(--accent-teal); font-size: 1.25rem; flex-shrink: 0;">🎛️</span>
+                <span style="font-weight: 500; font-size: 1.1rem; color: var(--text-primary);">Programas para estados
+                    específicos</span>
+            </div>
+        </div>
+
+        <p style="color: var(--text-secondary); font-size: 1.15rem; margin-top: 3rem; font-weight: 500;">No depende de
+            apps ni audio comprimido.</p>
+    </section>
+
+    <!-- 9. CTA FINAL -->
+    <section class="final-cta fade-in-up">
+        <div class="container">
+            <h2 class="text-gradient"
+                style="font-size: clamp(2.5rem, 6vw, 3.5rem); letter-spacing: -0.05em; margin-bottom: 1rem;">Empieza a
+                reducir tu estrés de forma real</h2>
+            <p
+                style="margin-bottom: 2.5rem; color: var(--text-secondary); font-size: 1.25rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                Medido, no solo sentido.</p>
+            <a href="/#como-funciona" class="btn btn-primary"
+                style="padding: 1.25rem 3.5rem; font-size: 1.15rem;">Explorar NeuroSinc</a>
+        </div>
+    </section>
+
+    <div id="site-footer"></div>
+    <script src="/js/layout.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

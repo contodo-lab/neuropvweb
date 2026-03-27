@@ -277,20 +277,7 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="container header-nav">
-            <a href="/" class="logo" aria-label="NeuroSinc Inicio">
-                <img src="/assets/img/logo.png" alt="NeuroSinc" class="logo-img">
-            </a>
-            <nav class="nav-links">
-                <a href="#como-funciona">Cómo Funciona</a>
-                <a href="#programas">Programas</a>
-                <a href="/guias/">Guías</a>
-                <a href="/contacto/">Contacto</a>
-                <a href="/en/" class="lang-switch"><span class="lang-flag">🇺🇸</span> EN</a>
-            </nav>
-        </div>
-    </header>
+    <div id="site-header"></div>
 
     <section class="gh-hero">
         <div class="container" style="position:relative;z-index:1;">
@@ -306,7 +293,22 @@
         </div>
     </section>
 
-    <div class="gh-body">
+    <div class="container fade-in-up" style="margin-top: -1rem; margin-bottom: 2rem; position: relative; z-index: 10;">
+        <a href="/como-bajar-el-cortisol/" style="display: block; background: linear-gradient(135deg, rgba(0, 194, 178, 0.15) 0%, rgba(11, 11, 11, 0) 100%); border: 1px solid rgba(0, 194, 178, 0.4); border-radius: 20px; padding: 2.5rem; text-decoration: none; margin: 0 auto; max-width: 1000px; transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px);" onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='var(--accent-teal)'; this.style.boxShadow='0 15px 40px rgba(0, 0, 0, 0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(0, 194, 178, 0.4)'; this.style.boxShadow='0 10px 30px rgba(0, 0, 0, 0.1)';">
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem;">
+                <div style="flex: 1; min-width: 280px;">
+                    <span style="font-size: 0.8rem; font-weight: 700; color: var(--accent-teal); text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;"><span style="font-size: 1.2rem;">🔬</span> INVESTIGACIÓN ESPECIAL</span>
+                    <h3 style="font-size: 1.8rem; color: #fff; margin-bottom: 0.5rem; letter-spacing: -0.02em;">Cómo reducir el cortisol de forma medible</h3>
+                    <p style="color: var(--text-secondary); margin: 0; max-width: 600px; font-size: 1.1rem; line-height: 1.6;">Descubre la neurociencia detrás de la reducción de la hormona del estrés a través de estimulación dirigida. Medido en laboratorio, no solo percibido.</p>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-weight: 600; color: #fff; background: var(--accent-teal); padding: 0.8rem 1.5rem; border-radius: 50px;">
+                    Ver resultados <span>→</span>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="gh-body" style="padding-top: 2rem;">
 
         <!-- FOCO -->
         <div class="gh-category fade-in-up">
@@ -349,11 +351,11 @@
                     </p>
                     <span class="gh-card-arrow">Leer guía <span>→</span></span>
                 </a>
-                <a href="/guias/sueno/mi-mente-no-para-por-la-noche/" class="gh-card sleep">
+                <a href="/guias/sueno/mi-mente-no-se-apaga/" class="gh-card sleep">
                     <span class="gh-card-label">Sueño · Nivel 2</span>
                     <h3>Mi Mente No Para Por la Noche</h3>
                     <p>Qué hacer cuando el pensamiento excesivo te mantiene despierto y tu cerebro no suelta.</p>
-                    <span class="gh-card-arrow" style="opacity: 0.6;">Próximamente <span>→</span></span>
+                    <span class="gh-card-arrow">Leer guía <span>→</span></span>
                 </a>
             </div>
         </div>
