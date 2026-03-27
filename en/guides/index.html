@@ -89,6 +89,7 @@
         .gh-category {
             margin-bottom: 6rem;
             position: relative;
+            overflow: hidden; /* Prevent decorative glows from causing horizontal scroll */
         }
 
         .gh-cat-header {
@@ -133,7 +134,7 @@
         /* Cards depth effects */
         .gh-cards {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
             gap: 1.5rem;
             position: relative;
             z-index: 1;
@@ -273,6 +274,46 @@
                 padding: 60px 1rem;
             }
         }
+
+        /* Research Promo Block */
+        .research-promo {
+            display: block;
+            background: linear-gradient(135deg, rgba(0, 194, 178, 0.15) 0%, rgba(11, 11, 11, 0) 100%);
+            border: 1px solid rgba(0, 194, 178, 0.4);
+            border-radius: 20px;
+            padding: 1.5rem;
+            text-decoration: none;
+            margin: 0 auto;
+            max-width: 1000px;
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        @media (min-width: 768px) {
+            .research-promo {
+                padding: 2.5rem;
+            }
+        }
+
+        .research-promo:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-teal);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .research-promo-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .research-promo-text {
+            flex: 1;
+            min-width: min(100%, 280px);
+        }
     </style>
 </head>
 
@@ -294,13 +335,9 @@
     </section>
 
     <div class="container fade-in-up" style="margin-top: -1rem; margin-bottom: 2rem; position: relative; z-index: 10;">
-        <a href="/en/how-to-lower-cortisol/"
-            style="display: block; background: linear-gradient(135deg, rgba(0, 194, 178, 0.15) 0%, rgba(11, 11, 11, 0) 100%); border: 1px solid rgba(0, 194, 178, 0.4); border-radius: 20px; padding: 2.5rem; text-decoration: none; margin: 0 auto; max-width: 1000px; transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px);"
-            onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='var(--accent-teal)'; this.style.boxShadow='0 15px 40px rgba(0, 0, 0, 0.2)';"
-            onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(0, 194, 178, 0.4)'; this.style.boxShadow='0 10px 30px rgba(0, 0, 0, 0.1)';">
-            <div
-                style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem;">
-                <div style="flex: 1; min-width: 280px;">
+        <a href="/en/how-to-lower-cortisol/" class="research-promo">
+            <div class="research-promo-content">
+                <div class="research-promo-text">
                     <span
                         style="font-size: 0.8rem; font-weight: 700; color: var(--accent-teal); text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;"><span
                             style="font-size: 1.2rem;">🔬</span> SPECIAL RESEARCH</span>
