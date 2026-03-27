@@ -28,7 +28,7 @@
             mount.innerHTML = html;
 
             // Fade in smoothly once content is ready
-            mount.style.transition = 'opacity 0.15s ease';
+            mount.style.transition = 'opacity 0.08s ease';
             requestAnimationFrame(() => { mount.style.opacity = '1'; });
             
             // Dispatch event for specialized scripts (like animation observer)
