@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Audio designed to help your brain slow down and prepare for sleep. NeuroSinc sleep sessions support a calmer mind at bedtime — without medication.">
+    <title>Sleep Audio Sessions | Fall Asleep Without Fighting Your Mind | NeuroSinc</title>
+    <link rel="canonical" href="https://neurosinc.com/en/sleep-audio/" />
+    <link rel="alternate" hreflang="en" href="https://neurosinc.com/en/sleep-audio/" />
+    <link rel="alternate" hreflang="es" href="https://neurosinc.com/audio-sueno/" />
+    <meta property="og:title" content="Sleep Audio Sessions | NeuroSinc">
+    <meta property="og:description" content="Audio designed to help your brain slow down and prepare for sleep.">
+    <meta property="og:url" content="https://neurosinc.com/en/sleep-audio/">
+    <meta property="og:type" content="website">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"NeuroSinc Sleep Audio Sessions","description":"Sound-based sessions designed to guide your brain into a calmer state before sleep.","brand":{"@type":"Brand","name":"NeuroSinc"},"offers":{"@type":"Offer","availability":"https://schema.org/InStock"}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" type="image/png" href="/assets/img/logo-icon.png">
+    <style>
+        :root { --sleep-accent: #a78bfa; }
+        .sa-hero { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:140px 1rem 80px; position:relative; overflow:hidden; background-color:var(--bg-color); }
+        .sa-hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 80% 55% at 50% 0%,rgba(80,60,180,.14) 0%,transparent 70%); pointer-events:none; }
+        .sa-hero::after { content:''; position:absolute; inset:0; background-image:radial-gradient(1px 1px at 15% 20%,rgba(255,255,255,.5) 0%,transparent 100%),radial-gradient(1px 1px at 72% 12%,rgba(255,255,255,.4) 0%,transparent 100%),radial-gradient(1px 1px at 88% 35%,rgba(255,255,255,.3) 0%,transparent 100%),radial-gradient(1px 1px at 40% 8%,rgba(255,255,255,.45) 0%,transparent 100%),radial-gradient(1px 1px at 60% 25%,rgba(167,139,250,.4) 0%,transparent 100%); pointer-events:none; }
+        .sa-hero-inner { position:relative; z-index:1; text-align:center; width:100%; }
+        .sa-hero-badge { display:inline-flex; align-items:center; gap:8px; background:rgba(80,60,180,.15); border:1px solid rgba(100,80,220,.3); color:var(--sleep-accent); font-size:.8rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; padding:.4rem 1rem; border-radius:999px; margin-bottom:2rem; }
+        .sa-hero h1 { font-size:clamp(2.8rem,7vw,5rem); letter-spacing:-.04em; line-height:1.05; max-width:800px; margin:0 auto 1.5rem; }
+        .sa-hero-sub { font-size:1.2rem; color:var(--text-secondary); max-width:520px; line-height:1.8; margin:0 auto .75rem; }
+        .sa-hero-support { font-size:.9rem; color:rgba(255,255,255,.25); letter-spacing:.03em; margin-bottom:2.5rem; }
+        .sa-hero-cta { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+        .wave-divider { width:100%; margin-top:4rem; }
+        .wave-svg { width:100%; height:80px; display:block; }
+        .wave-path-sleep { stroke:var(--sleep-accent); stroke-width:1; fill:none; opacity:.25; stroke-dasharray:1200; stroke-dashoffset:1200; animation:wave-draw-slow 5s ease-out forwards,sleep-pulse 7s ease-in-out 5s infinite; }
+        @keyframes wave-draw-slow { to { stroke-dashoffset:0; } }
+        @keyframes sleep-pulse { 0%,100% { opacity:.15; } 50% { opacity:.35; } }
+        .sa-section { padding:6rem 0; }
+        .sa-section-alt { background:var(--bg-surface); border-top:1px solid var(--border-color); border-bottom:1px solid var(--border-color); }
+        .sa-label { font-size:.75rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--sleep-accent); margin-bottom:1.25rem; display:block; }
+        .sa-h2 { font-size:clamp(2rem,4.5vw,3rem); letter-spacing:-.03em; line-height:1.2; max-width:680px; margin-bottom:1.5rem; }
+        .sa-lead { font-size:1.1rem; color:var(--text-secondary); line-height:1.8; max-width:580px; }
+        .sa-problem { max-width:680px; margin:0 auto; text-align:center; }
+        .sa-problem-lines { list-style:none; padding:0; margin:2.5rem 0 2rem; display:flex; flex-direction:column; gap:1rem; }
+        .sa-problem-lines li { font-size:1.2rem; color:var(--text-secondary); padding:1.1rem 1.5rem; background:var(--bg-card); border:1px solid var(--border-color); border-radius:12px; font-style:italic; }
+        .sa-resolution { font-size:1.05rem; color:var(--text-secondary); line-height:1.8; margin-top:1.5rem; }
+        .sa-resolution strong { color:var(--text-primary); }
+        .sa-reframe { max-width:640px; margin:0 auto; text-align:center; }
+        .sa-reframe-quote { font-size:clamp(1.8rem,4vw,2.6rem); font-weight:700; letter-spacing:-.03em; line-height:1.25; margin-bottom:2rem; }
+        .sa-reframe-quote em { color:var(--sleep-accent); font-style:normal; }
+        .sa-positioning { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; max-width:860px; margin:3rem auto 0; }
+        @media(max-width:640px) { .sa-positioning { grid-template-columns:1fr; } }
+        .sa-pos-card { padding:2rem; border-radius:16px; border:1px solid var(--border-color); }
+        .sa-pos-card.not { background:rgba(255,80,80,.04); border-color:rgba(255,80,80,.15); }
+        .sa-pos-card.is { background:linear-gradient(135deg,rgba(80,60,180,.12) 0%,rgba(80,60,180,.03) 100%); border-color:rgba(100,80,220,.25); }
+        .sa-pos-tag { font-size:.7rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:1rem; display:block; }
+        .sa-pos-card.not .sa-pos-tag { color:rgba(255,100,100,.8); }
+        .sa-pos-card.is .sa-pos-tag { color:var(--sleep-accent); }
+        .sa-pos-card p { font-size:1rem; color:var(--text-secondary); line-height:1.7; }
+        .sa-pos-card p strong { color:var(--text-primary); display:block; margin-bottom:.5rem; }
+        .sa-steps { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; max-width:900px; margin:3.5rem auto 0; }
+        @media(max-width:700px) { .sa-steps { grid-template-columns:1fr; } }
+        .sa-step { background:var(--bg-card); border:1px solid var(--border-color); border-radius:16px; padding:2rem 1.75rem; transition:border-color .4s,transform .4s; }
+        .sa-step:hover { border-color:rgba(100,80,220,.3); transform:translateY(-3px); }
+        .sa-step-num { font-size:3.5rem; font-weight:800; line-height:1; color:rgba(80,60,180,.15); margin-bottom:1rem; }
+        .sa-step h3 { font-size:1.1rem; margin-bottom:.5rem; }
+        .sa-step p { font-size:.9rem; color:var(--text-secondary); line-height:1.65; }
+        .sa-benefits-list { list-style:none; padding:0; max-width:600px; margin:3rem auto 0; display:flex; flex-direction:column; gap:1rem; }
+        .sa-benefits-list li { display:flex; align-items:center; gap:1rem; font-size:1.1rem; color:var(--text-secondary); line-height:1.5; }
+        .sa-benefits-list li::before { content:''; width:8px; height:8px; border-radius:50%; background:var(--sleep-accent); flex-shrink:0; box-shadow:0 0 12px rgba(167,139,250,.5); }
+        .sa-sessions { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; max-width:800px; margin:3rem auto 0; }
+        @media(max-width:640px) { .sa-sessions { grid-template-columns:1fr; } }
+        .sa-session-pill { background:var(--bg-card); border:1px solid var(--border-color); border-radius:14px; padding:1.5rem; text-align:center; }
+        .sa-session-pill .session-icon { font-size:1.75rem; margin-bottom:.75rem; }
+        .sa-session-pill p { font-size:.9rem; color:var(--text-secondary); line-height:1.5; }
+        .sa-validation { max-width:760px; margin:0 auto; text-align:center; }
+        .sa-stat-row { display:flex; justify-content:center; gap:3rem; margin:2.5rem 0; flex-wrap:wrap; }
+        .sa-stat h3 { font-size:3rem; font-weight:800; letter-spacing:-.04em; background:linear-gradient(135deg,#fff,var(--sleep-accent)); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; line-height:1; margin-bottom:.5rem; }
+        .sa-stat p { font-size:.85rem; color:var(--text-secondary); }
+        .sa-report-list { list-style:none; padding:0; margin:2rem 0 0; display:flex; flex-direction:column; gap:.75rem; }
+        .sa-report-list li { font-size:1rem; color:var(--text-secondary); display:flex; align-items:center; justify-content:center; gap:.75rem; }
+        .sa-report-list li::before { content:'✦'; color:var(--sleep-accent); font-size:.75rem; }
+        .sa-science-box { max-width:700px; margin:0 auto; background:linear-gradient(135deg,rgba(80,60,180,.09),transparent); border:1px solid rgba(100,80,220,.2); border-radius:20px; padding:3rem; text-align:center; }
+        .sa-science-box p { font-size:1.1rem; color:var(--text-secondary); line-height:1.8; }
+        .sa-science-box strong { color:var(--text-primary); }
+        .sa-disclaimer-pill { display:inline-block; font-size:.75rem; color:var(--text-secondary); background:rgba(255,255,255,.04); border:1px solid var(--border-color); border-radius:999px; padding:.4rem 1rem; margin-top:1.5rem; }
+        .sa-final-cta { text-align:center; padding:8rem 1rem; position:relative; overflow:hidden; }
+        .sa-final-cta::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 70% 50% at 50% 50%,rgba(80,60,180,.09) 0%,transparent 70%); pointer-events:none; }
+        .sa-final-cta h2 { font-size:clamp(2rem,5vw,3.5rem); letter-spacing:-.03em; max-width:640px; margin:0 auto 2rem; }
+        .sa-final-cta .cta-buttons { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+        .sa-internal-links { padding:4rem 0; border-top:1px solid var(--border-color); text-align:center; }
+        .sa-links-label { font-size:.8rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--text-secondary); margin-bottom:2rem; }
+        .sa-links-grid { display:flex; justify-content:center; gap:1.5rem; flex-wrap:wrap; }
+        .sa-link-card { display:flex; align-items:center; gap:.75rem; padding:1rem 1.75rem; background:var(--bg-card); border:1px solid var(--border-color); border-radius:12px; text-decoration:none; color:var(--text-secondary); font-size:.95rem; font-weight:500; transition:border-color .3s,color .3s; }
+        .sa-link-card:hover { border-color:rgba(100,80,220,.3); color:var(--text-primary); }
+        .sa-link-card span { font-size:1.25rem; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-nav">
+            <a href="/en/" class="logo" aria-label="NeuroSinc Home"><img src="/assets/img/logo.png" alt="NeuroSinc" class="logo-img"></a>
+            <nav class="nav-links">
+                <a href="/en/#how-it-works">How it Works</a>
+                <a href="/en/#programs">Programs</a>
+                <a href="/en/#faq">FAQ</a>
+                <a href="/en/guides/">Guides</a>
+                <a href="/en/contact/">Contact</a>
+                <a href="/audio-sueno/" class="lang-switch"><span class="lang-flag">🇪🇸</span> ES</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="sa-hero">
+        <div class="sa-hero-inner">
+            <div class="sa-hero-badge">🌙 Sleep Audio · NeuroSinc</div>
+            <h1 class="text-gradient">Fall asleep without<br>fighting your mind</h1>
+            <p class="sa-hero-sub">Audio designed to help your brain slow down and prepare for sleep</p>
+            <p class="sa-hero-support">15–30 minute sessions &nbsp;·&nbsp; Use before bed</p>
+            <div class="sa-hero-cta">
+                <a href="/en/#programs" class="btn btn-primary">Try a sleep session</a>
+                <a href="/en/#programs" class="btn btn-secondary">Listen to a demo</a>
+            </div>
+            <div class="wave-divider"><svg class="wave-svg" viewBox="0 0 1200 80" preserveAspectRatio="none"><path class="wave-path-sleep" d="M0,40 C150,20 300,60 450,40 C600,20 750,60 900,40 C1050,20 1150,55 1200,40"/></svg></div>
+        </div>
+    </section>
+
+    <section class="sa-section"><div class="container"><div class="sa-problem fade-in-up"><span class="sa-label">Does this sound familiar?</span><h2 class="sa-h2 text-gradient" style="margin:0 auto 0;">When sleep feels out of reach</h2><ul class="sa-problem-lines"><li>You're tired… but your mind keeps going</li><li>Thoughts don't stop</li><li>You check your phone one more time</li></ul><p class="sa-resolution"><strong>Falling asleep shouldn't feel like a struggle.</strong></p></div></div></section>
+
+    <section class="sa-section sa-section-alt"><div class="container"><div class="sa-reframe fade-in-up"><span class="sa-label">A different way to think about it</span><p class="sa-reframe-quote">Sleep isn't something you force.<br>It's something you <em>allow</em>.</p><p class="sa-lead" style="margin:0 auto;text-align:center;">NeuroSinc helps your brain transition into a calmer state using sound — gently, without effort.</p></div></div></section>
+
+    <section class="sa-section"><div class="container"><div style="text-align:center;" class="fade-in-up"><span class="sa-label">What NeuroSinc actually is</span><h2 class="sa-h2 text-gradient" style="margin:0 auto 1rem;">Not music. Not noise. Something different.</h2></div><div class="sa-positioning fade-in-up"><div class="sa-pos-card not"><span class="sa-pos-tag">✗ &nbsp; This is NOT</span><p><strong>Background noise</strong>Noise masks distractions. It doesn't guide your brain anywhere.</p><p style="margin-top:1rem;"><strong>Sleep music</strong>Music entertains — sleep requires your brain to slow down, not engage.</p></div><div class="sa-pos-card is"><span class="sa-pos-tag">✓ &nbsp; This IS</span><p><strong>Precisely calibrated audio</strong>Frequency sessions developed over 2+ years in a lab, designed to guide your mind from high activity into a slower, more relaxed state.</p><p style="margin-top:1rem;"><strong>Delivered through the right hardware</strong>Standard devices can't reproduce these frequencies correctly. NeuroSinc hardware is engineered for precision.</p></div></div></div></section>
+
+    <section class="sa-section sa-section-alt"><div class="container"><div style="text-align:center;" class="fade-in-up"><span class="sa-label">No effort required</span><h2 class="sa-h2 text-gradient" style="margin:0 auto 0;">Three steps to a calmer night</h2></div><div class="sa-steps fade-in-up"><div class="sa-step"><div class="sa-step-num">1</div><h3>Start a session before bed</h3><p>Choose a 15–30 minute session based on how wound-up your mind feels tonight.</p></div><div class="sa-step"><div class="sa-step-num">2</div><h3>Use headphones</h3><p>The audio works through separate signals in each ear. NeuroSinc hardware ensures the frequencies reach you correctly.</p></div><div class="sa-step"><div class="sa-step-num">3</div><h3>Let your mind slow down</h3><p>Your brain gradually shifts into a calmer rhythm. No effort, no forcing — just let it happen.</p></div></div></div></section>
+
+    <section class="sa-section"><div class="container"><div style="text-align:center;" class="fade-in-up"><span class="sa-label">What users experience</span><h2 class="sa-h2 text-gradient" style="margin:0 auto 0;">What a quieter night feels like</h2></div><ul class="sa-benefits-list fade-in-up"><li>Help your mind slow down before sleep</li><li>Reduce nighttime mental activity</li><li>Create a consistent wind-down routine</li><li>Support deeper, more restful sleep</li></ul></div></section>
+
+    <section class="sa-section sa-section-alt"><div class="container"><div style="text-align:center;" class="fade-in-up"><span class="sa-label">Built for your night</span><h2 class="sa-h2 text-gradient" style="margin:0 auto .75rem;">Built for your night routine</h2><p class="sa-lead" style="margin:0 auto;text-align:center;">Sessions last between 15 and 30 minutes. Use NeuroSinc:</p></div><div class="sa-sessions fade-in-up"><div class="sa-session-pill"><div class="session-icon">💭</div><p><strong style="color:var(--text-primary);">When your mind won't switch off</strong><br>Give it a rhythm to follow</p></div><div class="sa-session-pill"><div class="session-icon">😮‍💨</div><p><strong style="color:var(--text-primary);">After long or stressful days</strong><br>Decompress before sleep</p></div><div class="sa-session-pill"><div class="session-icon">🌙</div><p><strong style="color:var(--text-primary);">As part of your nightly routine</strong><br>Train your brain to wind down</p></div></div></div></section>
+
+    <section class="sa-section"><div class="container"><div class="sa-validation fade-in-up"><span class="sa-label">Real users, real results</span><h2 class="sa-h2 text-gradient" style="margin:0 auto 0;">Tested. Verified. Trusted.</h2><div class="sa-stat-row"><div class="sa-stat"><h3>800+</h3><p>Users tested</p></div><div class="sa-stat"><h3>2+</h3><p>Years of lab testing</p></div><div class="sa-stat"><h3>95%</h3><p>Report better pre-sleep rest</p></div></div><p style="color:var(--text-secondary);font-size:.95rem;margin-bottom:1.5rem;">Users report:</p><ul class="sa-report-list"><li>Easier transition into sleep</li><li>Less mental overactivity at night</li><li>Improved and more consistent bedtime routines</li></ul></div></div></section>
+
+    <section class="sa-section sa-section-alt"><div class="container"><div class="sa-science-box fade-in-up"><span class="sa-label" style="display:block;margin-bottom:1.5rem;">The science behind it</span><p>NeuroSinc is based on <strong>brainwave entrainment</strong> — sometimes known as binaural beats.</p><p style="margin-top:1.25rem;">This refers to the brain's natural tendency to <strong>align with rhythmic sound patterns</strong>. By delivering slightly different frequencies to each ear, the brain perceives a combined signal and gradually slows its rhythm toward rest.</p><p style="margin-top:1.25rem;">Our sessions were designed by an expert and lab-tested over 2+ years to identify the exact frequencies that best support calm and sleep preparation.</p><span class="sa-disclaimer-pill">Not a medical device · Results may vary · No medical claims made</span></div></div></section>
+
+    <section class="sa-final-cta"><div class="container"><div class="fade-in-up"><h2 class="text-gradient">Start your sleep session tonight</h2><div class="cta-buttons"><a href="/en/#programs" class="btn btn-primary">Try NeuroSinc</a><a href="/en/#programs" class="btn btn-secondary">Listen to a demo</a></div></div></div></section>
+
+    <section class="sa-internal-links"><div class="container"><p class="sa-links-label">Looking for something else?</p><div class="sa-links-grid"><a href="/en/focus-audio/" class="sa-link-card"><span>🎯</span> Improve focus</a><a href="/en/relaxation/" class="sa-link-card"><span>🧘</span> Calm your mind</a><a href="/en/" class="sa-link-card"><span>↩</span> Back to NeuroSinc</a></div></div></section>
+
+    <div id="site-footer"></div>
+    <script src="/js/layout.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guías de NeuroSinc — artículos prácticos sobre foco, sueño y calma mental. Aprende cómo el sonido guía tu cerebro al estado que necesitas.">
+    <title>Guías | Foco, Sueño y Relajación | NeuroSinc</title>
+    <link rel="canonical" href="https://neurosinc.com/guias/" />
+    <link rel="alternate" hreflang="es" href="https://neurosinc.com/guias/" />
+    <link rel="alternate" hreflang="en" href="https://neurosinc.com/en/guides/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" type="image/png" href="/assets/img/logo-icon.png">
+    <style>
+        /* Hero Section - Matching Home but shorter */
+        .gh-hero { 
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding-top: 100px;
+            position: relative;
+            overflow: hidden;
+            background-color: var(--bg-color);
+            background-image: url('/assets/img/hero-bg.png');
+            background-size: cover;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+        }
+        .gh-hero::before { 
+            content: ''; 
+            position: absolute; 
+            inset: 0; 
+            background: linear-gradient(180deg, rgba(11, 11, 11, 0.5) 0%, rgba(11, 11, 11, 0.95) 100%);
+            z-index: 0;
+        }
+        .gh-hero h1 { font-size: clamp(3rem, 7vw, 5.5rem); letter-spacing: -.04em; max-width: 900px; margin: 0 auto 1.5rem; line-height: 1.05; }
+        .gh-hero p { font-size: 1.25rem; color: var(--text-secondary); max-width: 650px; margin: 0 auto; line-height: 1.7; }
+        
+        /* Intro / Transition section */
+        .gh-intro { padding: 80px 1rem; text-align: center; background: var(--bg-surface); border-bottom: 1px solid var(--border-color); }
+        .gh-intro h2 { font-size: clamp(2rem, 5vw, 2.8rem); margin-bottom: 1.25rem; }
+        .gh-intro p { font-size: 1.1rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto; line-height: 1.8; }
+
+        .gh-body { max-width: 1000px; margin: 0 auto; padding: 4rem 1rem 6rem; }
+        
+        /* Category Specific Styles */
+        .gh-category { margin-bottom: 6rem; position: relative; }
+        .gh-cat-header { display: flex; flex-direction: column; align-items: flex-start; gap: 0.5rem; margin-bottom: 2.5rem; padding: 2rem; background: rgba(255,255,255,0.02); border-left: 3px solid var(--accent-teal); border-radius: 0 16px 16px 0; }
+        .gh-cat-header.sleep { border-left-color: #a78bfa; }
+        .gh-cat-header.relajacion { border-left-color: #6ee7b7; }
+        
+        .gh-cat-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+        .gh-cat-title { font-size: 2rem; font-weight: 700; letter-spacing: -.03em; color: var(--text-primary); }
+        .gh-cat-desc { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.5; max-width: 500px; }
+        
+        /* Cards depth effects */
+        .gh-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; position: relative; z-index: 1; }
+        .gh-card { display: flex; flex-direction: column; gap: .75rem; padding: 2rem; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); backdrop-filter: blur(12px); }
+        .gh-card:hover { transform: translateY(-8px); border-color: rgba(255,255,255,0.15); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        
+        .gh-glow { position: absolute; width: 300px; height: 300px; border-radius: 50%; opacity: 0.05; filter: blur(80px); pointer-events: none; z-index: 0; }
+        .glow-foco { top: -50px; right: -50px; background: var(--accent-teal); }
+        .glow-sueno { top: -50px; left: -50px; background: #a78bfa; }
+        .glow-relajacion { bottom: -50px; right: -50px; background: #6ee7b7; }
+
+        .gh-card-label { font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+        .gh-card.focus .gh-card-label { color: var(--accent-teal); }
+        .gh-card.sleep .gh-card-label { color: #a78bfa; }
+        .gh-card.calm .gh-card-label { color: #6ee7b7; }
+        
+        .gh-card h3 { font-size: 1.25rem; color: var(--text-primary); line-height: 1.3; margin: 0; }
+        .gh-card p { font-size: 0.95rem; line-height: 1.7; color: var(--text-secondary); margin: 0; }
+        .gh-card-arrow { font-size: .9rem; margin-top: auto; padding-top: 1rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; }
+        
+        /* Final CTA */
+        .gh-final-cta { text-align: center; padding: 100px 1rem; background: linear-gradient(180deg, var(--bg-color) 0%, var(--bg-surface) 100%); border-top: 1px solid var(--border-color); }
+        .gh-final-cta h2 { font-size: clamp(2.2rem, 5vw, 3.5rem); letter-spacing: -.04em; margin-bottom: 1.5rem; }
+        .gh-final-cta p { font-size: 1.2rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto 3rem; }
+        .gh-cta-btns { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+
+        @media(max-width: 768px) {
+            .gh-hero { min-height: 50vh; }
+            .gh-cat-header { border-radius: 0; border-left: none; border-bottom: 2px solid var(--accent-teal); padding: 1.5rem 1rem; }
+            .gh-final-cta { padding: 60px 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-nav">
+            <a href="/" class="logo"><img src="/assets/img/logo.png" alt="NeuroSinc" class="logo-img"></a>
+            <nav class="nav-links">
+                <a href="/#como-funciona">Cómo Funciona</a>
+                <a href="/#programas">Programas</a>
+                <a href="/guias/" style="color:var(--accent-teal);">Guías</a>
+                <a href="/contacto/">Contacto</a>
+                <a href="/en/guides/" class="lang-switch"><span class="lang-flag">🇺🇸</span> EN</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="gh-hero">
+        <div class="container" style="position:relative;z-index:1;">
+            <h1 class="text-gradient">Guías</h1>
+            <p>Aprende a mejorar tu foco, descanso y calma mental — y cómo usar el sonido para lograrlo</p>
+        </div>
+    </section>
+
+    <section class="gh-intro">
+        <div class="container fade-in-up">
+            <h2 class="text-gradient">Elige en qué quieres mejorar</h2>
+            <p>Cada guía está diseñada para ayudarte a entender tu estado mental y cómo cambiarlo en la práctica.</p>
+        </div>
+    </section>
+
+    <div class="gh-body">
+
+        <!-- FOCO -->
+        <div class="gh-category fade-in-up">
+            <div class="gh-glow glow-foco"></div>
+            <div class="gh-cat-header">
+                <span class="gh-cat-icon">🧠</span>
+                <div class="gh-cat-title">Foco</div>
+                <div class="gh-cat-desc">Entra en estados de concentración profunda y elimina distracciones</div>
+            </div>
+            <div class="gh-cards">
+                <a href="/guias/foco/audio-para-concentracion/" class="gh-card focus">
+                    <span class="gh-card-label">Foco · Nivel 1</span>
+                    <h3>Audio para la Concentración</h3>
+                    <p>Cómo las sesiones de sonido estructuradas ayudan a tu cerebro a entrar en un estado de foco más rápido.</p>
+                    <span class="gh-card-arrow">Leer guía <span>→</span></span>
+                </a>
+                <a href="/guias/foco/como-entrar-en-trabajo-profundo/" class="gh-card focus">
+                    <span class="gh-card-label">Foco · Nivel 2</span>
+                    <h3>Cómo Entrar en Trabajo Profundo</h3>
+                    <p>Técnicas prácticas para cambiar a una concentración sostenida y libre de distracciones.</p>
+                    <span class="gh-card-arrow" style="opacity: 0.6;">Próximamente <span>→</span></span>
+                </a>
+            </div>
+        </div>
+
+        <!-- SUEÑO -->
+        <div class="gh-category fade-in-up">
+            <div class="gh-glow glow-sueno"></div>
+            <div class="gh-cat-header sleep">
+                <span class="gh-cat-icon">🌙</span>
+                <div class="gh-cat-title">Sueño</div>
+                <div class="gh-cat-desc">Desconecta tu mente y prepárate para un descanso real</div>
+            </div>
+            <div class="gh-cards">
+                <a href="/guias/sueno/audio-para-dormir-mejor/" class="gh-card sleep">
+                    <span class="gh-card-label">Sueño · Nivel 1</span>
+                    <h3>Audio para Dormir Mejor</h3>
+                    <p>Cómo las sesiones de sonido estructuradas ayudan a tu cerebro a desacelerarse antes de dormir.</p>
+                    <span class="gh-card-arrow">Leer guía <span>→</span></span>
+                </a>
+                <a href="/guias/sueno/mi-mente-no-para-por-la-noche/" class="gh-card sleep">
+                    <span class="gh-card-label">Sueño · Nivel 2</span>
+                    <h3>Mi Mente No Para Por la Noche</h3>
+                    <p>Qué hacer cuando el pensamiento excesivo te mantiene despierto y tu cerebro no suelta.</p>
+                    <span class="gh-card-arrow" style="opacity: 0.6;">Próximamente <span>→</span></span>
+                </a>
+            </div>
+        </div>
+
+        <!-- RELAJACIÓN -->
+        <div class="gh-category fade-in-up">
+            <div class="gh-glow glow-relajacion"></div>
+            <div class="gh-cat-header relajacion">
+                <span class="gh-cat-icon">🧘</span>
+                <div class="gh-cat-title">Relajación</div>
+                <div class="gh-cat-desc">Reduce el ruido mental y recupera tu equilibrio</div>
+            </div>
+            <div class="gh-cards">
+                <a href="/guias/relajacion/audio-para-pensamientos-excesivos/" class="gh-card calm">
+                    <span class="gh-card-label">Relajación · Nivel 1</span>
+                    <h3>Audio para Pensamientos Excesivos</h3>
+                    <p>Cómo el sonido ayuda a callar una mente acelerada — y por qué funciona diferente a la música.</p>
+                    <span class="gh-card-arrow">Leer guía <span>→</span></span>
+                </a>
+                <a href="/guias/relajacion/como-calmar-una-mente-ocupada/" class="gh-card calm">
+                    <span class="gh-card-label">Relajación · Nivel 2</span>
+                    <h3>Cómo Calmar una Mente Ocupada</h3>
+                    <p>Formas prácticas de reducir el ruido mental y crear espacio entre los pensamientos.</p>
+                    <span class="gh-card-arrow" style="opacity: 0.6;">Próximamente <span>→</span></span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <section class="gh-final-cta fade-in-up">
+        <div class="container">
+            <h2 class="text-gradient">¿Quieres ir directo a la experiencia?</h2>
+            <p>Descubre cómo NeuroSinc puede ayudarte hoy mismo a través de nuestras sesiones especializadas.</p>
+            <div class="gh-cta-btns">
+                <a href="/#programas" class="btn btn-primary">Explorar programas</a>
+                <a href="/#como-funciona" class="btn btn-secondary">Probar NeuroSync</a>
+            </div>
+    </section>
+
+    <div id="site-footer"></div>
+    <script src="/js/layout.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>

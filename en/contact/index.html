@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with the NeuroSinc team. We're here to answer your questions about neuro-synchronization technology.">
+    <title>Contact | NeuroSinc</title>
+
+    <link rel="alternate" hreflang="es" href="https://neurosinc.com/contacto/" />
+    <link rel="alternate" hreflang="en" href="https://neurosinc.com/en/contact/" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" type="image/png" href="/assets/img/logo-icon.png">
+
+    <style>
+        /* ── Contact Hero ───────────────────────────── */
+        .contact-hero {
+            min-height: 55vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 120px;
+            padding-bottom: 0;
+            position: relative;
+            overflow: hidden;
+            background-color: var(--bg-color);
+            background-image: url('/assets/img/hero-bg.png');
+            background-size: cover;
+            background-position: center 30%;
+            background-repeat: no-repeat;
+        }
+        .contact-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(11,11,11,0.4) 0%, rgba(11,11,11,0.98) 100%);
+        }
+        .contact-hero-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        .contact-hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            letter-spacing: -0.03em;
+            margin-bottom: 1.25rem;
+        }
+        .contact-hero p {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            max-width: 520px;
+            margin: 0 auto;
+        }
+
+        /* ── Contact Body ───────────────────────────── */
+        .contact-body {
+            padding: 6rem 0 8rem;
+            background: var(--bg-color);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        @media (max-width: 700px) {
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ── Primary Email Card ─────────────────────── */
+        .contact-primary {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, rgba(0,194,178,0.12) 0%, rgba(0,194,178,0.04) 100%);
+            border: 1px solid rgba(0, 194, 178, 0.3);
+            border-radius: 20px;
+            padding: 3rem;
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+        @media (max-width: 600px) {
+            .contact-primary { flex-direction: column; text-align: center; }
+        }
+        .contact-primary-icon {
+            width: 72px;
+            height: 72px;
+            background: rgba(0, 194, 178, 0.15);
+            border: 1px solid rgba(0, 194, 178, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 2rem;
+        }
+        .contact-primary-text h2 {
+            font-size: 1.4rem;
+            margin-bottom: 0.4rem;
+        }
+        .contact-primary-text p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1.25rem;
+            line-height: 1.6;
+        }
+        .contact-email-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--accent-teal);
+            font-size: 1.25rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(0, 194, 178, 0.3);
+            padding-bottom: 4px;
+            transition: all 0.2s;
+        }
+        .contact-email-link:hover {
+            border-bottom-color: var(--accent-teal);
+            opacity: 0.8;
+        }
+        .contact-email-link svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* ── Info Cards ─────────────────────────────── */
+        .contact-info-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            backdrop-filter: blur(10px);
+            transition: border-color 0.3s;
+        }
+        .contact-info-card:hover {
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+        .info-card-icon {
+            font-size: 1.75rem;
+            margin-bottom: 0.25rem;
+        }
+        .info-card-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .info-card-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .info-card-value {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--accent-teal);
+            margin-top: 0.25rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-nav">
+            <a href="/en/" class="logo" aria-label="NeuroSinc Home">
+                <img src="/assets/img/logo.png" alt="NeuroSinc" class="logo-img">
+            </a>
+            <nav class="nav-links">
+                <a href="/en/#how-it-works">How it Works</a>
+                <a href="/en/#programs">Programs</a>
+                <a href="/en/#faq">FAQ</a>
+                <a href="/en/contact/">Contact</a>
+                <a href="/contacto/" class="lang-switch"><span class="lang-flag">🇪🇸</span> ES</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="contact-hero">
+        <div class="contact-hero-inner fade-in-up visible">
+            <h1 class="text-gradient">Let's talk</h1>
+            <p>Got questions about NeuroSinc or our neuro-synchronization technology? Reach out. Our team responds fast.</p>
+        </div>
+    </section>
+
+    <!-- CONTACT BODY -->
+    <section class="contact-body">
+        <div class="container">
+            <div class="contact-grid fade-in-up visible">
+
+                <!-- Primary Email Card -->
+                <div class="contact-primary">
+                    <div class="contact-primary-icon">✉️</div>
+                    <div class="contact-primary-text">
+                        <h2>Write to us directly</h2>
+                        <p>For product questions, orders, technical support, or partnerships. We respond within 24 business hours.</p>
+                        <a href="mailto:hello@neurosinc.com" class="contact-email-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            hello@neurosinc.com
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Response time card -->
+                <div class="contact-info-card">
+                    <div class="info-card-icon">⚡</div>
+                    <div class="info-card-title">Response time</div>
+                    <div class="info-card-desc">We check emails every business day, Monday through Friday.</div>
+                    <div class="info-card-value">&lt; 24 business hours</div>
+                </div>
+
+                <!-- Operating hours card -->
+                <div class="contact-info-card">
+                    <div class="info-card-icon">🕐</div>
+                    <div class="info-card-title">Business hours</div>
+                    <div class="info-card-desc">Monday to Friday, Chile time (GMT-3).</div>
+                    <div class="info-card-value">9:00 AM – 6:00 PM</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div id="site-footer"></div>
+    <script src="/js/layout.js"></script>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
