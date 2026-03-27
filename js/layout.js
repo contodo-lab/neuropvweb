@@ -18,11 +18,18 @@
 
         if (!filePath) return;
 
+        // Hide mount point to prevent flicker while fetching
+        mount.style.opacity = '0';
+
         try {
             const res = await fetch(filePath);
             if (!res.ok) throw new Error(`Partial fetch failed: ${res.status}`);
             const html = await res.text();
             mount.innerHTML = html;
+
+            // Fade in smoothly once content is ready
+            mount.style.transition = 'opacity 0.15s ease';
+            requestAnimationFrame(() => { mount.style.opacity = '1'; });
             
             // Dispatch event for specialized scripts (like animation observer)
             const partialName = filePath.split('/').pop().replace('.html', '');
@@ -31,6 +38,7 @@
             }));
         } catch (e) {
             console.warn(`[layout] partial failed: ${filePath}`, e);
+            mount.style.opacity = '1'; // always show on error so page isn't broken
         }
     };
 
