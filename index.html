@@ -34,8 +34,36 @@
                 <a href="/contacto/">Contacto</a>
                 <a href="/en/" class="lang-switch"><span class="lang-flag">🇺🇸</span> EN</a>
             </nav>
+            <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+            <nav class="mobile-nav">
+                <a href="#como-funciona" class="mobile-nav-link">Cómo Funciona</a>
+                <a href="#programas" class="mobile-nav-link">Programas</a>
+                <a href="/guias/" class="mobile-nav-link">Guías</a>
+                <a href="/contacto/" class="mobile-nav-link">Contacto</a>
+                <a href="/en/" class="mobile-nav-link lang-switch-mobile"><span class="lang-flag">🇺🇸</span> Switch to English</a>
+            </nav>
         </div>
     </header>
+    <script>
+        (function () {
+            const btn  = document.getElementById('hamburger-btn');
+            const menu = document.getElementById('mobile-menu');
+            if (!btn || !menu) return;
+            const open  = () => { btn.classList.add('is-open'); menu.classList.add('is-open'); btn.setAttribute('aria-expanded','true'); menu.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; };
+            const close = () => { btn.classList.remove('is-open'); menu.classList.remove('is-open'); btn.setAttribute('aria-expanded','false'); menu.setAttribute('aria-hidden','true'); document.body.style.overflow=''; };
+            btn.addEventListener('click', () => btn.classList.contains('is-open') ? close() : open());
+            menu.querySelectorAll('.mobile-nav-link').forEach(l => l.addEventListener('click', close));
+            document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+            window.addEventListener('resize', () => { if (window.innerWidth >= 768) close(); });
+        })();
+    </script>
 
     <!-- SECTION 1 — HERO -->
     <section class="hero">
