@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <meta name="robots" content="noindex, nofollow">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="NeuroSinc Guides — practical articles on focus, sleep, and mental calm. Learn how sound guides your brain into the state you need.">
+    <meta name="description"
+        content="NeuroSinc Guides — practical articles on focus, sleep, and mental calm. Learn how sound guides your brain into the state you need.">
     <title>Guides | Focus, Sleep & Relaxation | NeuroSinc</title>
     <link rel="canonical" href="https://neurosinc.com/en/guides/" />
     <link rel="alternate" hreflang="en" href="https://neurosinc.com/en/guides/" />
@@ -15,7 +18,7 @@
     <link rel="icon" type="image/png" href="/assets/img/logo-icon.png">
     <style>
         /* Hero Section - Matching Home but shorter */
-        .gh-hero { 
+        .gh-hero {
             min-height: 60vh;
             display: flex;
             flex-direction: column;
@@ -30,75 +33,261 @@
             background-position: center bottom;
             background-repeat: no-repeat;
         }
-        .gh-hero::before { 
-            content: ''; 
-            position: absolute; 
-            inset: 0; 
+
+        .gh-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
             background: linear-gradient(180deg, rgba(11, 11, 11, 0.5) 0%, rgba(11, 11, 11, 0.95) 100%);
             z-index: 0;
         }
-        .gh-hero h1 { font-size: clamp(3rem, 7vw, 5.5rem); letter-spacing: -.04em; max-width: 900px; margin: 0 auto 1.5rem; line-height: 1.05; }
-        .gh-hero p { font-size: 1.25rem; color: var(--text-secondary); max-width: 650px; margin: 0 auto; line-height: 1.7; }
-        
+
+        .gh-hero h1 {
+            font-size: clamp(3rem, 7vw, 5.5rem);
+            letter-spacing: -.04em;
+            max-width: 900px;
+            margin: 0 auto 1.5rem;
+            line-height: 1.05;
+        }
+
+        .gh-hero p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 650px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
         /* Intro / Transition section */
-        .gh-intro { padding: 80px 1rem; text-align: center; background: var(--bg-surface); border-bottom: 1px solid var(--border-color); }
-        .gh-intro h2 { font-size: clamp(2rem, 5vw, 2.8rem); margin-bottom: 1.25rem; }
-        .gh-intro p { font-size: 1.1rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto; line-height: 1.8; }
+        .gh-intro {
+            padding: 80px 1rem;
+            text-align: center;
+            background: var(--bg-surface);
+            border-bottom: 1px solid var(--border-color);
+        }
 
-        .gh-body { max-width: 1000px; margin: 0 auto; padding: 4rem 1rem 6rem; }
-        
+        .gh-intro h2 {
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            margin-bottom: 1.25rem;
+        }
+
+        .gh-intro p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .gh-body {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 1rem 6rem;
+        }
+
         /* Category Specific Styles */
-        .gh-category { margin-bottom: 6rem; position: relative; }
-        .gh-cat-header { display: flex; flex-direction: column; align-items: flex-start; gap: 0.5rem; margin-bottom: 2.5rem; padding: 2rem; background: rgba(255,255,255,0.02); border-left: 3px solid var(--accent-teal); border-radius: 0 16px 16px 0; }
-        .gh-cat-header.sleep { border-left-color: #a78bfa; }
-        .gh-cat-header.relaxation { border-left-color: #6ee7b7; }
-        
-        .gh-cat-icon { font-size: 2rem; margin-bottom: 0.5rem; }
-        .gh-cat-title { font-size: 2rem; font-weight: 700; letter-spacing: -.03em; color: var(--text-primary); }
-        .gh-cat-desc { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.5; max-width: 500px; }
-        
-        /* Cards depth effects */
-        .gh-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; position: relative; z-index: 1; }
-        .gh-card { display: flex; flex-direction: column; gap: .75rem; padding: 2rem; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); backdrop-filter: blur(12px); }
-        .gh-card:hover { transform: translateY(-8px); border-color: rgba(255,255,255,0.15); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
-        
-        .gh-glow { position: absolute; width: 300px; height: 300px; border-radius: 50%; opacity: 0.05; filter: blur(80px); pointer-events: none; z-index: 0; }
-        .glow-foco { top: -50px; right: -50px; background: var(--accent-teal); }
-        .glow-sueno { top: -50px; left: -50px; background: #a78bfa; }
-        .glow-relajacion { bottom: -50px; right: -50px; background: #6ee7b7; }
+        .gh-category {
+            margin-bottom: 6rem;
+            position: relative;
+        }
 
-        .gh-card-label { font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
-        .gh-card.focus .gh-card-label { color: var(--accent-teal); }
-        .gh-card.sleep .gh-card-label { color: #a78bfa; }
-        .gh-card.calm .gh-card-label { color: #6ee7b7; }
-        
-        .gh-card h3 { font-size: 1.25rem; color: var(--text-primary); line-height: 1.3; margin: 0; }
-        .gh-card p { font-size: 0.95rem; line-height: 1.7; color: var(--text-secondary); margin: 0; }
-        .gh-card-arrow { font-size: .9rem; margin-top: auto; padding-top: 1rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; }
-        
+        .gh-cat-header {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-left: 3px solid var(--accent-teal);
+            border-radius: 0 16px 16px 0;
+        }
+
+        .gh-cat-header.sleep {
+            border-left-color: #a78bfa;
+        }
+
+        .gh-cat-header.relaxation {
+            border-left-color: #6ee7b7;
+        }
+
+        .gh-cat-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .gh-cat-title {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -.03em;
+            color: var(--text-primary);
+        }
+
+        .gh-cat-desc {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            max-width: 500px;
+        }
+
+        /* Cards depth effects */
+        .gh-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .gh-card {
+            display: flex;
+            flex-direction: column;
+            gap: .75rem;
+            padding: 2rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            backdrop-filter: blur(12px);
+        }
+
+        .gh-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .gh-glow {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            opacity: 0.05;
+            filter: blur(80px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .glow-foco {
+            top: -50px;
+            right: -50px;
+            background: var(--accent-teal);
+        }
+
+        .glow-sueno {
+            top: -50px;
+            left: -50px;
+            background: #a78bfa;
+        }
+
+        .glow-relajacion {
+            bottom: -50px;
+            right: -50px;
+            background: #6ee7b7;
+        }
+
+        .gh-card-label {
+            font-size: .75rem;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+        }
+
+        .gh-card.focus .gh-card-label {
+            color: var(--accent-teal);
+        }
+
+        .gh-card.sleep .gh-card-label {
+            color: #a78bfa;
+        }
+
+        .gh-card.calm .gh-card-label {
+            color: #6ee7b7;
+        }
+
+        .gh-card h3 {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            line-height: 1.3;
+            margin: 0;
+        }
+
+        .gh-card p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        .gh-card-arrow {
+            font-size: .9rem;
+            margin-top: auto;
+            padding-top: 1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
         /* Final CTA */
-        .gh-final-cta { text-align: center; padding: 100px 1rem; background: linear-gradient(180deg, var(--bg-color) 0%, var(--bg-surface) 100%); border-top: 1px solid var(--border-color); }
-        .gh-final-cta h2 { font-size: clamp(2.2rem, 5vw, 3.5rem); letter-spacing: -.04em; margin-bottom: 1.5rem; }
-        .gh-final-cta p { font-size: 1.2rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto 3rem; }
-        .gh-cta-btns { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+        .gh-final-cta {
+            text-align: center;
+            padding: 100px 1rem;
+            background: linear-gradient(180deg, var(--bg-color) 0%, var(--bg-surface) 100%);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .gh-final-cta h2 {
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            letter-spacing: -.04em;
+            margin-bottom: 1.5rem;
+        }
+
+        .gh-final-cta p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+
+        .gh-cta-btns {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
 
         @media(max-width: 768px) {
-            .gh-hero { min-height: 50vh; }
-            .gh-cat-header { border-radius: 0; border-left: none; border-bottom: 2px solid var(--accent-teal); padding: 1.5rem 1rem; }
-            .gh-final-cta { padding: 60px 1rem; }
+            .gh-hero {
+                min-height: 50vh;
+            }
+
+            .gh-cat-header {
+                border-radius: 0;
+                border-left: none;
+                border-bottom: 2px solid var(--accent-teal);
+                padding: 1.5rem 1rem;
+            }
+
+            .gh-final-cta {
+                padding: 60px 1rem;
+            }
         }
     </style>
 </head>
+
 <body>
     <header class="header">
         <div class="container header-nav">
-            <a href="/en/" class="logo"><img src="/assets/img/logo.png" alt="NeuroSinc" class="logo-img"></a>
+            <a href="/en/" class="logo" aria-label="NeuroSinc Home">
+                <img src="/assets/img/logo.png" alt="NeuroSinc" class="logo-img">
+            </a>
             <nav class="nav-links">
-                <a href="/en/#how-it-works">How it Works</a>
-                <a href="/en/#programs">Programs</a>
-                <a href="/en/guides/" style="color:var(--accent-teal);">Guides</a>
+                <a href="#how-it-works">How it Works</a>
+                <a href="#programs">Programs</a>
+                <a href="/en/guides/">Guides</a>
                 <a href="/en/contact/">Contact</a>
-                <a href="/guias/" class="lang-switch"><span class="lang-flag">🇪🇸</span> ES</a>
+                <a href="/" class="lang-switch"><span class="lang-flag">🇪🇸</span> ES</a>
             </nav>
         </div>
     </header>
@@ -131,7 +320,8 @@
                 <a href="/en/guides/focus/audio-for-concentration/" class="gh-card focus">
                     <span class="gh-card-label">Focus · Tier 1</span>
                     <h3>Audio for Concentration</h3>
-                    <p>How structured sound sessions help your brain enter a focused state faster than willpower alone.</p>
+                    <p>How structured sound sessions help your brain enter a focused state faster than willpower alone.
+                    </p>
                     <span class="gh-card-arrow">Read guide <span>→</span></span>
                 </a>
                 <a href="/en/guides/focus/how-to-enter-deep-work/" class="gh-card focus">
@@ -161,7 +351,8 @@
                 <a href="/en/guides/sleep/sleep-aid-audio/" class="gh-card sleep">
                     <span class="gh-card-label">Sleep · Tier 1</span>
                     <h3>Sleep Aid Audio</h3>
-                    <p>How structured sound sessions help your brain slow down before bed — not music, not white noise.</p>
+                    <p>How structured sound sessions help your brain slow down before bed — not music, not white noise.
+                    </p>
                     <span class="gh-card-arrow">Read guide <span>→</span></span>
                 </a>
                 <a href="/en/guides/sleep/mind-wont-shut-off-at-night/" class="gh-card sleep">
@@ -213,4 +404,5 @@
     <script src="/js/layout.js"></script>
     <script src="/js/script.js"></script>
 </body>
+
 </html>

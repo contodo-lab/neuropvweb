@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <meta name="robots" content="noindex, nofollow">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Struggling to focus? Learn how to improve concentration and enter deep work faster with simple, practical strategies — and the science behind why focus is a state, not a skill.">
+    <meta name="description"
+        content="Struggling to focus? Learn how to improve concentration and enter deep work faster with simple, practical strategies — and the science behind why focus is a state, not a skill.">
     <title>How to Focus Better (Without Distractions) | NeuroSinc Guides</title>
     <link rel="canonical" href="https://neurosinc.com/en/guides/focus/how-to-focus-better/" />
     <meta property="og:title" content="How to Focus Better (Without Distractions) | NeuroSinc">
-    <meta property="og:description" content="Learn how to improve concentration and enter deep work faster with simple, practical strategies.">
+    <meta property="og:description"
+        content="Learn how to improve concentration and enter deep work faster with simple, practical strategies.">
     <meta property="og:url" content="https://neurosinc.com/en/guides/focus/how-to-focus-better/">
     <meta property="og:type" content="article">
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Focus Better (Without Distractions)","description":"Learn how to improve concentration and enter deep work faster.","author":{"@type":"Organization","name":"NeuroSinc"},"publisher":{"@type":"Organization","name":"NeuroSinc"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://neurosinc.com/en/guides/focus/how-to-focus-better/"}}</script>
+    <script
+        type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Focus Better (Without Distractions)","description":"Learn how to improve concentration and enter deep work faster.","author":{"@type":"Organization","name":"NeuroSinc"},"publisher":{"@type":"Organization","name":"NeuroSinc"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://neurosinc.com/en/guides/focus/how-to-focus-better/"}}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -25,13 +30,15 @@
             overflow: hidden;
             background-color: var(--bg-color);
         }
+
         .guide-hero::before {
             content: '';
             position: absolute;
             inset: 0;
-            background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(0,194,178,.07) 0%, transparent 70%);
+            background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(0, 194, 178, .07) 0%, transparent 70%);
             pointer-events: none;
         }
+
         .guide-breadcrumb {
             display: inline-flex;
             align-items: center;
@@ -40,16 +47,65 @@
             color: var(--text-secondary);
             margin-bottom: 2rem;
         }
-        .guide-breadcrumb a { color: var(--accent-teal); text-decoration: none; }
-        .guide-breadcrumb a:hover { text-decoration: underline; }
-        .guide-breadcrumb span { color: rgba(255,255,255,.2); }
-        .guide-hero h1 { font-size: clamp(2.4rem,5.5vw,4rem); letter-spacing: -.04em; line-height: 1.1; max-width: 760px; margin: 0 auto 1.5rem; }
-        .guide-meta { display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 2rem; }
-        .guide-meta-item { font-size: .8rem; color: var(--text-secondary); display: flex; align-items: center; gap: .4rem; }
-        .guide-meta-item strong { color: var(--text-primary); }
-        .guide-intro { max-width: 680px; margin: 0 auto; font-size: 1.15rem; color: var(--text-secondary); line-height: 1.85; text-align: left; }
-        .guide-intro p + p { margin-top: 1.25rem; }
-        .guide-intro strong { color: var(--text-primary); }
+
+        .guide-breadcrumb a {
+            color: var(--accent-teal);
+            text-decoration: none;
+        }
+
+        .guide-breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .guide-breadcrumb span {
+            color: rgba(255, 255, 255, .2);
+        }
+
+        .guide-hero h1 {
+            font-size: clamp(2.4rem, 5.5vw, 4rem);
+            letter-spacing: -.04em;
+            line-height: 1.1;
+            max-width: 760px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .guide-meta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .guide-meta-item {
+            font-size: .8rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: .4rem;
+        }
+
+        .guide-meta-item strong {
+            color: var(--text-primary);
+        }
+
+        .guide-intro {
+            max-width: 680px;
+            margin: 0 auto;
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            line-height: 1.85;
+            text-align: left;
+        }
+
+        .guide-intro p+p {
+            margin-top: 1.25rem;
+        }
+
+        .guide-intro strong {
+            color: var(--text-primary);
+        }
 
         /* Article body layout */
         .guide-body {
@@ -57,9 +113,13 @@
             margin: 0 auto;
             padding: 4rem 1rem 2rem;
         }
-        .guide-section { margin-bottom: 4rem; }
+
+        .guide-section {
+            margin-bottom: 4rem;
+        }
+
         .guide-section h2 {
-            font-size: clamp(1.6rem,3.5vw,2.2rem);
+            font-size: clamp(1.6rem, 3.5vw, 2.2rem);
             letter-spacing: -.03em;
             line-height: 1.2;
             margin-bottom: 1.5rem;
@@ -67,6 +127,7 @@
             position: relative;
             padding-left: 1rem;
         }
+
         .guide-section h2::before {
             content: '';
             position: absolute;
@@ -77,6 +138,7 @@
             border-radius: 999px;
             background: var(--accent-teal);
         }
+
         .guide-section h3 {
             font-size: 1.15rem;
             font-weight: 600;
@@ -84,13 +146,18 @@
             color: var(--text-primary);
             margin: 2rem 0 .75rem;
         }
+
         .guide-section p {
             font-size: 1.05rem;
             color: var(--text-secondary);
             line-height: 1.85;
             margin-bottom: 1.1rem;
         }
-        .guide-section p strong { color: var(--text-primary); }
+
+        .guide-section p strong {
+            color: var(--text-primary);
+        }
+
         .guide-section ul {
             list-style: none;
             padding: 0;
@@ -99,6 +166,7 @@
             flex-direction: column;
             gap: .65rem;
         }
+
         .guide-section ul li {
             font-size: 1.05rem;
             color: var(--text-secondary);
@@ -107,6 +175,7 @@
             align-items: flex-start;
             gap: .875rem;
         }
+
         .guide-section ul li::before {
             content: '→';
             color: var(--accent-teal);
@@ -118,13 +187,14 @@
 
         /* Pull quote / highlight box */
         .guide-pullquote {
-            background: linear-gradient(135deg, rgba(0,194,178,.08), rgba(0,194,178,.02));
-            border: 1px solid rgba(0,194,178,.2);
+            background: linear-gradient(135deg, rgba(0, 194, 178, .08), rgba(0, 194, 178, .02));
+            border: 1px solid rgba(0, 194, 178, .2);
             border-left: 3px solid var(--accent-teal);
             border-radius: 12px;
             padding: 1.75rem 2rem;
             margin: 2.5rem 0;
         }
+
         .guide-pullquote p {
             font-size: 1.15rem;
             font-style: italic;
@@ -141,6 +211,7 @@
             padding: 3rem;
             margin: 3rem 0;
         }
+
         .guide-bridge-label {
             font-size: .75rem;
             font-weight: 700;
@@ -150,16 +221,35 @@
             display: block;
             margin-bottom: 1.25rem;
         }
+
         .guide-bridge h2 {
-            font-size: clamp(1.5rem,3vw,2rem);
+            font-size: clamp(1.5rem, 3vw, 2rem);
             letter-spacing: -.03em;
             margin-bottom: 1.25rem;
             padding-left: 0 !important;
         }
-        .guide-bridge h2::before { display: none; }
-        .guide-bridge p { font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 1rem; }
-        .guide-bridge p strong { color: var(--text-primary); }
-        .guide-bridge-cta { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+
+        .guide-bridge h2::before {
+            display: none;
+        }
+
+        .guide-bridge p {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .guide-bridge p strong {
+            color: var(--text-primary);
+        }
+
+        .guide-bridge-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
 
         /* Science box */
         .guide-science {
@@ -169,10 +259,27 @@
             padding: 2rem;
             margin: 2rem 0;
         }
-        .guide-science p { color: var(--text-secondary); line-height: 1.8; margin-bottom: .75rem; font-size: 1rem; }
-        .guide-science p:last-child { margin: 0; }
-        .guide-science a { color: var(--accent-teal); text-decoration: none; font-weight: 500; }
-        .guide-science a:hover { text-decoration: underline; }
+
+        .guide-science p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: .75rem;
+            font-size: 1rem;
+        }
+
+        .guide-science p:last-child {
+            margin: 0;
+        }
+
+        .guide-science a {
+            color: var(--accent-teal);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .guide-science a:hover {
+            text-decoration: underline;
+        }
 
         /* Related links */
         .guide-related {
@@ -180,6 +287,7 @@
             padding-top: 3rem;
             margin-top: 4rem;
         }
+
         .guide-related-label {
             font-size: .75rem;
             font-weight: 700;
@@ -189,41 +297,137 @@
             margin-bottom: 1.5rem;
             display: block;
         }
-        .guide-links-grid { display: flex; flex-direction: column; gap: .75rem; }
-        .guide-link { display: flex; align-items: center; gap: .75rem; text-decoration: none; color: var(--text-secondary); font-size: .95rem; padding: .875rem 1.25rem; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 10px; transition: border-color .25s, color .25s; }
-        .guide-link:hover { border-color: rgba(0,194,178,.3); color: var(--text-primary); }
-        .guide-link-icon { font-size: 1.1rem; flex-shrink: 0; }
-        .guide-link-text { flex: 1; }
-        .guide-link-text strong { display: block; font-size: .95rem; color: var(--text-primary); margin-bottom: .2rem; }
-        .guide-link-text span { font-size: .8rem; }
-        .guide-link-arrow { color: var(--accent-teal); font-size: .9rem; }
+
+        .guide-links-grid {
+            display: flex;
+            flex-direction: column;
+            gap: .75rem;
+        }
+
+        .guide-link {
+            display: flex;
+            align-items: center;
+            gap: .75rem;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: .95rem;
+            padding: .875rem 1.25rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            transition: border-color .25s, color .25s;
+        }
+
+        .guide-link:hover {
+            border-color: rgba(0, 194, 178, .3);
+            color: var(--text-primary);
+        }
+
+        .guide-link-icon {
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .guide-link-text {
+            flex: 1;
+        }
+
+        .guide-link-text strong {
+            display: block;
+            font-size: .95rem;
+            color: var(--text-primary);
+            margin-bottom: .2rem;
+        }
+
+        .guide-link-text span {
+            font-size: .8rem;
+        }
+
+        .guide-link-arrow {
+            color: var(--accent-teal);
+            font-size: .9rem;
+        }
 
         /* BOFU cross-links */
         .guide-bofu {
             display: grid;
-            grid-template-columns: repeat(3,1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 1rem;
             margin-top: 2.5rem;
         }
-        @media(max-width:600px) { .guide-bofu { grid-template-columns: 1fr; } }
-        .guide-bofu-card { display: flex; flex-direction: column; align-items: flex-start; gap: .5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 14px; text-decoration: none; color: var(--text-secondary); font-size: .9rem; transition: border-color .3s, transform .3s; }
-        .guide-bofu-card:hover { border-color: rgba(0,194,178,.3); transform: translateY(-2px); color: var(--text-primary); }
-        .guide-bofu-card .bofu-icon { font-size: 1.5rem; }
-        .guide-bofu-card strong { font-size: .95rem; color: var(--text-primary); display: block; }
+
+        @media(max-width:600px) {
+            .guide-bofu {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .guide-bofu-card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: .5rem;
+            padding: 1.25rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: .9rem;
+            transition: border-color .3s, transform .3s;
+        }
+
+        .guide-bofu-card:hover {
+            border-color: rgba(0, 194, 178, .3);
+            transform: translateY(-2px);
+            color: var(--text-primary);
+        }
+
+        .guide-bofu-card .bofu-icon {
+            font-size: 1.5rem;
+        }
+
+        .guide-bofu-card strong {
+            font-size: .95rem;
+            color: var(--text-primary);
+            display: block;
+        }
 
         /* Final CTA */
         .guide-final-cta {
-            background: linear-gradient(135deg, rgba(0,194,178,.08), var(--bg-surface));
-            border: 1px solid rgba(0,194,178,.2);
+            background: linear-gradient(135deg, rgba(0, 194, 178, .08), var(--bg-surface));
+            border: 1px solid rgba(0, 194, 178, .2);
             border-radius: 20px;
             padding: 3.5rem 2.5rem;
             text-align: center;
             margin: 4rem 0;
         }
-        .guide-final-cta h2 { font-size: clamp(1.6rem,3.5vw,2.4rem); letter-spacing: -.03em; margin-bottom: 1rem; padding-left: 0; }
-        .guide-final-cta h2::before { display: none; }
-        .guide-final-cta p { color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7; max-width: 480px; margin: 0 auto 2rem; }
-        .guide-final-cta .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+        .guide-final-cta h2 {
+            font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+            letter-spacing: -.03em;
+            margin-bottom: 1rem;
+            padding-left: 0;
+        }
+
+        .guide-final-cta h2::before {
+            display: none;
+        }
+
+        .guide-final-cta p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            max-width: 480px;
+            margin: 0 auto 2rem;
+        }
+
+        .guide-final-cta .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
         /* TOC */
         .guide-toc {
@@ -233,22 +437,65 @@
             padding: 1.75rem 2rem;
             margin: 0 0 3rem;
         }
-        .guide-toc-label { font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 1rem; display: block; }
-        .guide-toc ol { list-style: none; padding: 0; margin: 0; counter-reset: toc; display: flex; flex-direction: column; gap: .5rem; }
-        .guide-toc ol li { counter-increment: toc; display: flex; align-items: center; gap: .625rem; }
-        .guide-toc ol li::before { content: counter(toc); font-size: .75rem; font-weight: 700; color: var(--accent-teal); min-width: 1.25rem; }
-        .guide-toc ol li a { font-size: .9rem; color: var(--text-secondary); text-decoration: none; transition: color .2s; }
-        .guide-toc ol li a:hover { color: var(--accent-teal); }
+
+        .guide-toc-label {
+            font-size: .75rem;
+            font-weight: 700;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .guide-toc ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            counter-reset: toc;
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+        }
+
+        .guide-toc ol li {
+            counter-increment: toc;
+            display: flex;
+            align-items: center;
+            gap: .625rem;
+        }
+
+        .guide-toc ol li::before {
+            content: counter(toc);
+            font-size: .75rem;
+            font-weight: 700;
+            color: var(--accent-teal);
+            min-width: 1.25rem;
+        }
+
+        .guide-toc ol li a {
+            font-size: .9rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color .2s;
+        }
+
+        .guide-toc ol li a:hover {
+            color: var(--accent-teal);
+        }
     </style>
 </head>
+
 <body>
     <header class="header">
         <div class="container header-nav">
-            <a href="/en/" class="logo" aria-label="NeuroSinc Home"><img src="/assets/img/logo.png" alt="NeuroSinc" class="logo-img"></a>
+            <a href="/en/" class="logo" aria-label="NeuroSinc Home">
+                <img src="/assets/img/logo.png" alt="NeuroSinc" class="logo-img">
+            </a>
             <nav class="nav-links">
-                <a href="/en/#how-it-works">How it Works</a>
-                <a href="/en/#programs">Programs</a>
-                <a href="/en/#faq">FAQ</a>
+                <a href="#how-it-works">How it Works</a>
+                <a href="#programs">Programs</a>
+                <a href="/en/guides/">Guides</a>
                 <a href="/en/contact/">Contact</a>
                 <a href="/" class="lang-switch"><span class="lang-flag">🇪🇸</span> ES</a>
             </nav>
@@ -275,8 +522,10 @@
             </div>
             <div class="guide-intro fade-in-up">
                 <p>If you feel like you can't focus the way you used to, <strong>you're not alone</strong>.</p>
-                <p>Distractions are everywhere. Your brain is constantly stimulated. And staying focused feels harder than it should.</p>
-                <p>The good news: focus isn't about willpower. <strong>It's about entering the right mental state.</strong></p>
+                <p>Distractions are everywhere. Your brain is constantly stimulated. And staying focused feels harder
+                    than it should.</p>
+                <p>The good news: focus isn't about willpower. <strong>It's about entering the right mental
+                        state.</strong></p>
             </div>
         </div>
     </section>
@@ -298,8 +547,11 @@
         <!-- S1: WHY HARD -->
         <section class="guide-section fade-in-up" id="why-hard">
             <h2>Why it's so hard to focus today</h2>
-            <p>Most people assume focus is a discipline problem. In reality, <strong>it's often a state problem</strong>.</p>
-            <p>Your brain isn't designed for the level of stimulation it receives today. Every notification, every tab, every open conversation competes for your attention — and your brain responds by staying in a state of constant, low-level alertness.</p>
+            <p>Most people assume focus is a discipline problem. In reality, <strong>it's often a state
+                    problem</strong>.</p>
+            <p>Your brain isn't designed for the level of stimulation it receives today. Every notification, every tab,
+                every open conversation competes for your attention — and your brain responds by staying in a state of
+                constant, low-level alertness.</p>
             <ul>
                 <li>Your brain is overstimulated before you even start working</li>
                 <li>Task-switching costs more mental energy than most people realize</li>
@@ -322,7 +574,8 @@
                 <li>You process information faster and with less effort</li>
                 <li>Time passes differently — what felt like 10 minutes is 45</li>
             </ul>
-            <p>The goal isn't to "try harder." It's to create the conditions where your brain can shift into that state naturally.</p>
+            <p>The goal isn't to "try harder." It's to create the conditions where your brain can shift into that state
+                naturally.</p>
         </section>
 
         <!-- S3: HOW TO IMPROVE -->
@@ -330,7 +583,8 @@
             <h2>How to improve your focus</h2>
 
             <h3>1. Reduce input before you start</h3>
-            <p>Give your brain a chance to settle before you begin deep work. Most people jump straight from passive scrolling into demanding tasks — and wonder why focus takes so long to arrive.</p>
+            <p>Give your brain a chance to settle before you begin deep work. Most people jump straight from passive
+                scrolling into demanding tasks — and wonder why focus takes so long to arrive.</p>
             <ul>
                 <li>Avoid social media for 15–30 minutes before your work session</li>
                 <li>Reduce notifications — put your phone face-down or on Do Not Disturb</li>
@@ -338,11 +592,15 @@
             </ul>
 
             <h3>2. Work in time blocks</h3>
-            <p>Your natural attention span isn't 8 hours. It's much shorter — and that's fine. Instead of fighting it, design your work around it.</p>
-            <p>Use <strong>15–30 minute deep work blocks</strong> with clear start and stop points. This matches your brain's natural rhythm and makes starting much easier — it's just 15 minutes, not an entire afternoon.</p>
+            <p>Your natural attention span isn't 8 hours. It's much shorter — and that's fine. Instead of fighting it,
+                design your work around it.</p>
+            <p>Use <strong>15–30 minute deep work blocks</strong> with clear start and stop points. This matches your
+                brain's natural rhythm and makes starting much easier — it's just 15 minutes, not an entire afternoon.
+            </p>
 
             <h3>3. Control your environment</h3>
-            <p>Your surroundings directly influence your mental state. A chaotic environment signals "there are things to respond to" — which keeps your brain in alert mode, not focus mode.</p>
+            <p>Your surroundings directly influence your mental state. A chaotic environment signals "there are things
+                to respond to" — which keeps your brain in alert mode, not focus mode.</p>
             <ul>
                 <li>Reduce ambient noise interruptions (not all noise — some is neutral)</li>
                 <li>Minimize visual clutter from your work space</li>
@@ -350,17 +608,24 @@
             </ul>
 
             <h3>4. Use tools that help you enter focus faster</h3>
-            <p>One of the most effective ways to improve focus is to <strong>help your brain enter the right state more quickly</strong> — rather than waiting for it to settle on its own, which can take 15–20 minutes of frustrated effort.</p>
-            <p>Instead of relying only on discipline, you can use tools specifically designed to guide your brain's attention. This is where audio-based tools become surprisingly effective.</p>
+            <p>One of the most effective ways to improve focus is to <strong>help your brain enter the right state more
+                    quickly</strong> — rather than waiting for it to settle on its own, which can take 15–20 minutes of
+                frustrated effort.</p>
+            <p>Instead of relying only on discipline, you can use tools specifically designed to guide your brain's
+                attention. This is where audio-based tools become surprisingly effective.</p>
         </section>
 
         <!-- S4: PRODUCT BRIDGE -->
         <div class="guide-bridge fade-in-up" id="enter-focus">
             <span class="guide-bridge-label">🎯 Explore further</span>
             <h2 class="text-gradient">A different way to enter deep focus</h2>
-            <p>NeuroSinc uses <strong>audio designed to guide your brain into a focused state</strong> — not background music, and not a meditation app.</p>
-            <p>It's a structured audio experience based on a phenomenon called brainwave entrainment, developed and tested over 2+ years in a lab. Sessions last between 15 and 30 minutes — designed to match a natural deep work block.</p>
-            <p>The core idea: instead of waiting for focus to arrive, you actively guide your brain into the right state before you start.</p>
+            <p>NeuroSinc uses <strong>audio designed to guide your brain into a focused state</strong> — not background
+                music, and not a meditation app.</p>
+            <p>It's a structured audio experience based on a phenomenon called brainwave entrainment, developed and
+                tested over 2+ years in a lab. Sessions last between 15 and 30 minutes — designed to match a natural
+                deep work block.</p>
+            <p>The core idea: instead of waiting for focus to arrive, you actively guide your brain into the right state
+                before you start.</p>
             <div class="guide-bridge-cta">
                 <a href="/en/focus-audio/" class="btn btn-primary">Try a focus session</a>
                 <a href="/en/focus-audio/" class="btn btn-secondary">Listen to a demo</a>
@@ -371,9 +636,14 @@
         <section class="guide-section fade-in-up" id="science">
             <h2>The science behind it</h2>
             <div class="guide-science">
-                <p>NeuroSinc is based on a phenomenon known as <strong>brainwave entrainment</strong> — sometimes referred to as binaural beats.</p>
-                <p>This refers to the brain's natural tendency to align its electrical activity with rhythmic external sound patterns. By delivering slightly different frequencies to each ear, the brain perceives a third frequency — and begins to follow it.</p>
-                <p>This isn't a new idea. It's been studied since the 1970s. What's changed is the precision of the hardware used to deliver these frequencies — standard phone audio cards lack the accuracy needed for this to work reliably.</p>
+                <p>NeuroSinc is based on a phenomenon known as <strong>brainwave entrainment</strong> — sometimes
+                    referred to as binaural beats.</p>
+                <p>This refers to the brain's natural tendency to align its electrical activity with rhythmic external
+                    sound patterns. By delivering slightly different frequencies to each ear, the brain perceives a
+                    third frequency — and begins to follow it.</p>
+                <p>This isn't a new idea. It's been studied since the 1970s. What's changed is the precision of the
+                    hardware used to deliver these frequencies — standard phone audio cards lack the accuracy needed for
+                    this to work reliably.</p>
                 <a href="/en/#how-it-works">→ Learn more about how NeuroSinc works</a>
             </div>
         </section>
@@ -445,4 +715,5 @@
     <script src="/js/layout.js"></script>
     <script src="/js/script.js"></script>
 </body>
+
 </html>

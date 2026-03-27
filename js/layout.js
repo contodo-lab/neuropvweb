@@ -1,11 +1,11 @@
 (async function () {
     const partials = document.querySelectorAll('[data-partial], #site-footer, #site-header');
     
-    // Helper to determine the correct partial path for the footer
-    const getFooterPath = () => {
-        const isEn = window.location.pathname.includes('/en/') || window.location.pathname.includes('/guides/');
-        return isEn ? '/partials/footer-en.html' : '/partials/footer.html';
-    };
+    // Helper to determine the correct partial path based on language
+    const isEn = () => window.location.pathname.startsWith('/en/');
+
+    const getFooterPath = () => isEn() ? '/partials/footer-en.html' : '/partials/footer.html';
+    const getHeaderPath = () => isEn() ? '/partials/header-en.html' : '/partials/header.html';
 
     const loadPartial = async (mount) => {
         let filePath = mount.getAttribute('data-partial');
@@ -13,7 +13,7 @@
         // Default logic for footer/header if no data-partial is provided
         if (!filePath) {
             if (mount.id === 'site-footer') filePath = getFooterPath();
-            // Future: if (mount.id === 'site-header') filePath = getHeaderPath();
+            if (mount.id === 'site-header') filePath = getHeaderPath();
         }
 
         if (!filePath) return;

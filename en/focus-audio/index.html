@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <meta name="robots" content="noindex, nofollow">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Audio designed to guide your brain into a focused state in minutes. NeuroSinc focus sessions help you enter deep work faster — without music, without medication.">
+    <meta name="description"
+        content="Audio designed to guide your brain into a focused state in minutes. NeuroSinc focus sessions help you enter deep work faster — without music, without medication.">
     <title>Focus Audio Sessions | Enter Deep Focus in Minutes | NeuroSinc</title>
 
     <!-- SEO -->
@@ -55,19 +58,21 @@
             overflow: hidden;
             background-color: var(--bg-color);
         }
+
         .fa-hero::before {
             content: '';
             position: absolute;
             inset: 0;
-            background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,194,178,0.10) 0%, transparent 70%);
+            background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0, 194, 178, 0.10) 0%, transparent 70%);
             pointer-events: none;
         }
+
         .fa-hero-badge {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(0,194,178,0.10);
-            border: 1px solid rgba(0,194,178,0.3);
+            background: rgba(0, 194, 178, 0.10);
+            border: 1px solid rgba(0, 194, 178, 0.3);
             color: var(--accent-teal);
             font-size: 0.8rem;
             font-weight: 600;
@@ -77,6 +82,7 @@
             border-radius: 999px;
             margin-bottom: 2rem;
         }
+
         .fa-hero h1 {
             font-size: clamp(2.8rem, 7vw, 5rem);
             letter-spacing: -0.04em;
@@ -84,6 +90,7 @@
             max-width: 800px;
             margin-bottom: 1.5rem;
         }
+
         .fa-hero-sub {
             font-size: 1.25rem;
             color: var(--text-secondary);
@@ -91,12 +98,14 @@
             line-height: 1.7;
             margin-bottom: 0.75rem;
         }
+
         .fa-hero-support {
             font-size: 0.9rem;
-            color: rgba(255,255,255,0.3);
+            color: rgba(255, 255, 255, 0.3);
             letter-spacing: 0.03em;
             margin-bottom: 2.5rem;
         }
+
         .fa-hero-cta {
             display: flex;
             gap: 1rem;
@@ -110,11 +119,13 @@
             margin-top: 4rem;
             position: relative;
         }
+
         .wave-svg {
             width: 100%;
             height: 80px;
             display: block;
         }
+
         .wave-path {
             stroke: var(--accent-teal);
             stroke-width: 1.5;
@@ -124,23 +135,36 @@
             stroke-dashoffset: 1200;
             animation: wave-draw 3s ease-out forwards, wave-pulse 4s ease-in-out 3s infinite;
         }
+
         @keyframes wave-draw {
-            to { stroke-dashoffset: 0; }
+            to {
+                stroke-dashoffset: 0;
+            }
         }
+
         @keyframes wave-pulse {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 0.7; }
+
+            0%,
+            100% {
+                opacity: 0.3;
+            }
+
+            50% {
+                opacity: 0.7;
+            }
         }
 
         /* ─── SHARED SECTION STYLES ─────────────── */
         .fa-section {
             padding: 6rem 0;
         }
+
         .fa-section-alt {
             background: var(--bg-surface);
             border-top: 1px solid var(--border-color);
             border-bottom: 1px solid var(--border-color);
         }
+
         .fa-label {
             font-size: 0.75rem;
             font-weight: 700;
@@ -150,6 +174,7 @@
             margin-bottom: 1.25rem;
             display: block;
         }
+
         .fa-h2 {
             font-size: clamp(2rem, 4.5vw, 3rem);
             letter-spacing: -0.03em;
@@ -157,6 +182,7 @@
             max-width: 680px;
             margin-bottom: 1.5rem;
         }
+
         .fa-lead {
             font-size: 1.1rem;
             color: var(--text-secondary);
@@ -170,6 +196,7 @@
             margin: 0 auto;
             text-align: center;
         }
+
         .fa-problem-lines {
             list-style: none;
             padding: 0;
@@ -178,6 +205,7 @@
             flex-direction: column;
             gap: 1rem;
         }
+
         .fa-problem-lines li {
             font-size: 1.25rem;
             color: var(--text-secondary);
@@ -187,15 +215,18 @@
             border-radius: 12px;
             transition: border-color 0.3s;
         }
+
         .fa-problem-lines li:hover {
-            border-color: rgba(255,255,255,0.15);
+            border-color: rgba(255, 255, 255, 0.15);
         }
+
         .fa-problem-resolution {
             font-size: 1.05rem;
             color: var(--text-secondary);
             line-height: 1.8;
             margin-top: 1.5rem;
         }
+
         .fa-problem-resolution strong {
             color: var(--text-primary);
         }
@@ -206,6 +237,7 @@
             margin: 0 auto;
             text-align: center;
         }
+
         .fa-reframe-quote {
             font-size: clamp(1.8rem, 4vw, 2.8rem);
             font-weight: 700;
@@ -213,6 +245,7 @@
             line-height: 1.2;
             margin-bottom: 2rem;
         }
+
         .fa-reframe-quote em {
             color: var(--accent-teal);
             font-style: normal;
@@ -226,20 +259,29 @@
             max-width: 860px;
             margin: 3rem auto 0;
         }
-        @media (max-width: 640px) { .fa-positioning { grid-template-columns: 1fr; } }
+
+        @media (max-width: 640px) {
+            .fa-positioning {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .fa-pos-card {
             padding: 2rem;
             border-radius: 16px;
             border: 1px solid var(--border-color);
         }
+
         .fa-pos-card.not {
-            background: rgba(255,80,80,0.04);
-            border-color: rgba(255,80,80,0.15);
+            background: rgba(255, 80, 80, 0.04);
+            border-color: rgba(255, 80, 80, 0.15);
         }
+
         .fa-pos-card.is {
-            background: linear-gradient(135deg, rgba(0,194,178,0.10) 0%, rgba(0,194,178,0.03) 100%);
-            border-color: rgba(0,194,178,0.25);
+            background: linear-gradient(135deg, rgba(0, 194, 178, 0.10) 0%, rgba(0, 194, 178, 0.03) 100%);
+            border-color: rgba(0, 194, 178, 0.25);
         }
+
         .fa-pos-tag {
             font-size: 0.7rem;
             font-weight: 700;
@@ -248,13 +290,21 @@
             margin-bottom: 1rem;
             display: block;
         }
-        .fa-pos-card.not .fa-pos-tag { color: rgba(255,100,100,0.8); }
-        .fa-pos-card.is .fa-pos-tag { color: var(--accent-teal); }
+
+        .fa-pos-card.not .fa-pos-tag {
+            color: rgba(255, 100, 100, 0.8);
+        }
+
+        .fa-pos-card.is .fa-pos-tag {
+            color: var(--accent-teal);
+        }
+
         .fa-pos-card p {
             font-size: 1rem;
             color: var(--text-secondary);
             line-height: 1.7;
         }
+
         .fa-pos-card p strong {
             color: var(--text-primary);
             display: block;
@@ -269,7 +319,13 @@
             max-width: 900px;
             margin: 3.5rem auto 0;
         }
-        @media (max-width: 700px) { .fa-steps { grid-template-columns: 1fr; } }
+
+        @media (max-width: 700px) {
+            .fa-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .fa-step {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -279,21 +335,25 @@
             overflow: hidden;
             transition: border-color 0.3s, transform 0.3s;
         }
+
         .fa-step:hover {
-            border-color: rgba(0,194,178,0.3);
+            border-color: rgba(0, 194, 178, 0.3);
             transform: translateY(-4px);
         }
+
         .fa-step-num {
             font-size: 3.5rem;
             font-weight: 800;
             line-height: 1;
-            color: rgba(0,194,178,0.12);
+            color: rgba(0, 194, 178, 0.12);
             margin-bottom: 1rem;
         }
+
         .fa-step h3 {
             font-size: 1.1rem;
             margin-bottom: 0.5rem;
         }
+
         .fa-step p {
             font-size: 0.9rem;
             color: var(--text-secondary);
@@ -310,6 +370,7 @@
             flex-direction: column;
             gap: 1rem;
         }
+
         .fa-benefits-list li {
             display: flex;
             align-items: center;
@@ -318,6 +379,7 @@
             color: var(--text-secondary);
             line-height: 1.5;
         }
+
         .fa-benefits-list li::before {
             content: '';
             width: 10px;
@@ -325,7 +387,7 @@
             border-radius: 50%;
             background: var(--accent-teal);
             flex-shrink: 0;
-            box-shadow: 0 0 10px rgba(0,194,178,0.6);
+            box-shadow: 0 0 10px rgba(0, 194, 178, 0.6);
         }
 
         /* ─── SECTION 7: SESSION STRUCTURE ─────────── */
@@ -336,7 +398,13 @@
             max-width: 800px;
             margin: 3rem auto 0;
         }
-        @media (max-width: 640px) { .fa-sessions { grid-template-columns: 1fr; } }
+
+        @media (max-width: 640px) {
+            .fa-sessions {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .fa-session-pill {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -344,10 +412,12 @@
             padding: 1.5rem;
             text-align: center;
         }
+
         .fa-session-pill .session-icon {
             font-size: 1.75rem;
             margin-bottom: 0.75rem;
         }
+
         .fa-session-pill p {
             font-size: 0.9rem;
             color: var(--text-secondary);
@@ -360,6 +430,7 @@
             margin: 0 auto;
             text-align: center;
         }
+
         .fa-stat-row {
             display: flex;
             justify-content: center;
@@ -367,9 +438,11 @@
             margin: 2.5rem 0;
             flex-wrap: wrap;
         }
+
         .fa-stat {
             text-align: center;
         }
+
         .fa-stat h3 {
             font-size: 3rem;
             font-weight: 800;
@@ -381,10 +454,12 @@
             line-height: 1;
             margin-bottom: 0.5rem;
         }
+
         .fa-stat p {
             font-size: 0.85rem;
             color: var(--text-secondary);
         }
+
         .fa-report-list {
             list-style: none;
             padding: 0;
@@ -393,6 +468,7 @@
             flex-direction: column;
             gap: 0.75rem;
         }
+
         .fa-report-list li {
             font-size: 1rem;
             color: var(--text-secondary);
@@ -401,6 +477,7 @@
             justify-content: center;
             gap: 0.75rem;
         }
+
         .fa-report-list li::before {
             content: '★';
             color: var(--accent-teal);
@@ -411,25 +488,28 @@
         .fa-science-box {
             max-width: 700px;
             margin: 0 auto;
-            background: linear-gradient(135deg, rgba(0,194,178,0.08), transparent);
-            border: 1px solid rgba(0,194,178,0.2);
+            background: linear-gradient(135deg, rgba(0, 194, 178, 0.08), transparent);
+            border: 1px solid rgba(0, 194, 178, 0.2);
             border-radius: 20px;
             padding: 3rem;
             text-align: center;
         }
+
         .fa-science-box p {
             font-size: 1.1rem;
             color: var(--text-secondary);
             line-height: 1.8;
         }
+
         .fa-science-box strong {
             color: var(--text-primary);
         }
+
         .fa-disclaimer-pill {
             display: inline-block;
             font-size: 0.75rem;
             color: var(--text-secondary);
-            background: rgba(255,255,255,0.04);
+            background: rgba(255, 255, 255, 0.04);
             border: 1px solid var(--border-color);
             border-radius: 999px;
             padding: 0.4rem 1rem;
@@ -443,19 +523,22 @@
             position: relative;
             overflow: hidden;
         }
+
         .fa-final-cta::before {
             content: '';
             position: absolute;
             inset: 0;
-            background: radial-gradient(ellipse 70% 50% at 50% 50%, rgba(0,194,178,0.08) 0%, transparent 70%);
+            background: radial-gradient(ellipse 70% 50% at 50% 50%, rgba(0, 194, 178, 0.08) 0%, transparent 70%);
             pointer-events: none;
         }
+
         .fa-final-cta h2 {
             font-size: clamp(2rem, 5vw, 3.5rem);
             letter-spacing: -0.03em;
             max-width: 640px;
             margin: 0 auto 2rem;
         }
+
         .fa-final-cta .cta-buttons {
             display: flex;
             gap: 1rem;
@@ -469,6 +552,7 @@
             border-top: 1px solid var(--border-color);
             text-align: center;
         }
+
         .fa-links-label {
             font-size: 0.8rem;
             font-weight: 600;
@@ -477,12 +561,14 @@
             color: var(--text-secondary);
             margin-bottom: 2rem;
         }
+
         .fa-links-grid {
             display: flex;
             justify-content: center;
             gap: 1.5rem;
             flex-wrap: wrap;
         }
+
         .fa-link-card {
             display: flex;
             align-items: center;
@@ -497,25 +583,28 @@
             font-weight: 500;
             transition: border-color 0.3s, color 0.3s;
         }
+
         .fa-link-card:hover {
-            border-color: rgba(0,194,178,0.3);
+            border-color: rgba(0, 194, 178, 0.3);
             color: var(--text-primary);
         }
-        .fa-link-card span { font-size: 1.25rem; }
+
+        .fa-link-card span {
+            font-size: 1.25rem;
+        }
     </style>
 </head>
+
 <body>
 
-    <!-- ─────────────── HEADER ─────────────────── -->
     <header class="header">
         <div class="container header-nav">
             <a href="/en/" class="logo" aria-label="NeuroSinc Home">
                 <img src="/assets/img/logo.png" alt="NeuroSinc" class="logo-img">
             </a>
             <nav class="nav-links">
-                <a href="/en/#how-it-works">How it Works</a>
-                <a href="/en/#programs">Programs</a>
-                <a href="/en/#faq">FAQ</a>
+                <a href="#how-it-works">How it Works</a>
+                <a href="#programs">Programs</a>
                 <a href="/en/guides/">Guides</a>
                 <a href="/en/contact/">Contact</a>
                 <a href="/" class="lang-switch"><span class="lang-flag">🇪🇸</span> ES</a>
@@ -526,7 +615,9 @@
     <!-- ─────────────── S1: HERO ───────────────── -->
     <section class="fa-hero">
         <div class="fa-hero-badge">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                <circle cx="12" cy="12" r="10" />
+            </svg>
             Focus Audio · NeuroSinc
         </div>
         <h1 class="text-gradient">Enter deep focus<br>without distractions</h1>
@@ -540,7 +631,8 @@
         <!-- Animated wave divider -->
         <div class="wave-divider">
             <svg class="wave-svg" viewBox="0 0 1200 80" preserveAspectRatio="none">
-                <path class="wave-path" d="M0,40 C100,10 200,70 300,40 C400,10 500,70 600,40 C700,10 800,70 900,40 C1000,10 1100,70 1200,40"/>
+                <path class="wave-path"
+                    d="M0,40 C100,10 200,70 300,40 C400,10 500,70 600,40 C700,10 800,70 900,40 C1000,10 1100,70 1200,40" />
             </svg>
         </div>
     </section>
@@ -574,7 +666,8 @@
                     It's something you <em>enter</em>.
                 </p>
                 <p class="fa-lead" style="margin: 0 auto; text-align: center;">
-                    NeuroSinc helps guide your brain into a state of deep concentration using sound. No willpower required.
+                    NeuroSinc helps guide your brain into a state of deep concentration using sound. No willpower
+                    required.
                 </p>
             </div>
         </div>
@@ -603,11 +696,13 @@
                     <span class="fa-pos-tag">✓ &nbsp; This IS</span>
                     <p>
                         <strong>Precisely designed audio</strong>
-                        Each session uses specific frequencies engineered over 2+ years in a lab to actively guide your mental state.
+                        Each session uses specific frequencies engineered over 2+ years in a lab to actively guide your
+                        mental state.
                     </p>
                     <p style="margin-top: 1rem;">
                         <strong>Delivered through hardware that works</strong>
-                        Standard phone audio cards lack the precision to reproduce these frequencies correctly. NeuroSinc includes its own purpose-built hardware.
+                        Standard phone audio cards lack the precision to reproduce these frequencies correctly.
+                        NeuroSinc includes its own purpose-built hardware.
                     </p>
                 </div>
             </div>
@@ -663,20 +758,24 @@
             <div style="text-align: center;" class="fade-in-up">
                 <span class="fa-label">Fits your schedule</span>
                 <h2 class="fa-h2 text-gradient" style="margin: 0 auto 0.75rem;">Designed for real work sessions</h2>
-                <p class="fa-lead" style="margin: 0 auto; text-align: center;">Each session lasts between 15 and 30 minutes — easy to integrate wherever you need focus.</p>
+                <p class="fa-lead" style="margin: 0 auto; text-align: center;">Each session lasts between 15 and 30
+                    minutes — easy to integrate wherever you need focus.</p>
             </div>
             <div class="fa-sessions fade-in-up">
                 <div class="fa-session-pill">
                     <div class="session-icon">☀️</div>
-                    <p><strong style="color: var(--text-primary);">Before work</strong><br>Prime your brain before you start</p>
+                    <p><strong style="color: var(--text-primary);">Before work</strong><br>Prime your brain before you
+                        start</p>
                 </div>
                 <div class="fa-session-pill">
                     <div class="session-icon">🧠</div>
-                    <p><strong style="color: var(--text-primary);">During deep work</strong><br>Sustain concentration through long blocks</p>
+                    <p><strong style="color: var(--text-primary);">During deep work</strong><br>Sustain concentration
+                        through long blocks</p>
                 </div>
                 <div class="fa-session-pill">
                     <div class="session-icon">⚡</div>
-                    <p><strong style="color: var(--text-primary);">When focus drops</strong><br>Reset your mental state mid-day</p>
+                    <p><strong style="color: var(--text-primary);">When focus drops</strong><br>Reset your mental state
+                        mid-day</p>
                 </div>
             </div>
         </div>
@@ -772,4 +871,5 @@
 
     <script src="/js/script.js"></script>
 </body>
+
 </html>
