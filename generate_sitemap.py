@@ -10,7 +10,7 @@ ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 SITEMAP_PATH = os.path.join(ROOT_DIR, "sitemap.xml")
 
 # Directories and files to exclude from the sitemap
-EXCLUDE_DIRS = {'.git', 'css', 'js', 'assets', 'audio-calma', 'en/calm-mind-audio', 'partials'}
+EXCLUDE_DIRS = {'.git', 'css', 'js', 'assets', 'partials', 'learn'}
 EXCLUDE_FILES = {'generate_sitemap.py', '404.html'}
 
 def generate_sitemap():

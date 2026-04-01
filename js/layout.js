@@ -2,10 +2,10 @@
     const partials = document.querySelectorAll('[data-partial], #site-footer, #site-header');
 
     // Helper to determine the correct partial path based on language
-    const isEn = () => window.location.pathname.startsWith('/en/');
+    const isEs = () => window.location.pathname.startsWith('/es/');
 
-    const getFooterPath = () => isEn() ? '/partials/footer-en.html' : '/partials/footer.html';
-    const getHeaderPath = () => isEn() ? '/partials/header-en.html' : '/partials/header.html';
+    const getFooterPath = () => isEs() ? '/partials/footer.html' : '/partials/footer-en.html';
+    const getHeaderPath = () => isEs() ? '/partials/header.html' : '/partials/header-en.html';
 
     const loadPartial = async (mount) => {
         let filePath = mount.getAttribute('data-partial');
@@ -30,7 +30,7 @@
             // Update lang-switch to point to the correct alternate page for this URL.
             // Reads from the <link rel="alternate" hreflang="..."> tags already in <head>.
             if (mount.id === 'site-header') {
-                const targetLang = isEn() ? 'es' : 'en';
+                const targetLang = isEs() ? 'en' : 'es';
                 const altLink = document.querySelector(`link[rel="alternate"][hreflang="${targetLang}"]`);
                 if (altLink) {
                     const altPath = new URL(altLink.href).pathname;

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta name="robots" content="noindex, nofollow">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="NeuroSinc is a neuro-acoustic hardware system designed to help users enter states of focus, calm, or sleep through guided audio sessions.">
-    <title>NeuroSinc | Advanced Neuro-synchronization Technology for Everyday Balance</title>
+        content="NeuroSinc es un sistema neuroacústico de hardware diseñado para guiar tu cerebro hacia estados de foco, calma o sueño a través de sesiones de audio guiado.">
+    <title>NeuroSinc | Tecnología de Neurosincronización para tu equilibrio diario</title>
 
     <link rel="alternate" hreflang="es" href="https://neurosinc.com/es/" />
     <link rel="alternate" hreflang="en" href="https://neurosinc.com/" />
@@ -19,37 +19,23 @@
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="icon" type="image/png" href="/assets/img/logo-icon.png">
-    <script>
-        (function() {
-            // Language Routing Script
-            if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
-                if (!sessionStorage.getItem('lang-redirected')) {
-                    var userLang = navigator.language || navigator.userLanguage;
-                    if (userLang && userLang.toLowerCase().startsWith('es')) {
-                        sessionStorage.setItem('lang-redirected', 'true');
-                        window.location.replace('/es/');
-                    }
-                }
-            }
-        })();
-    </script>
 </head>
 
 <body>
     <header class="header">
         <div class="container header-nav">
-            <a href="/" class="logo" aria-label="NeuroSinc Home">
+            <a href="/es/" class="logo" aria-label="NeuroSinc Inicio">
                 <img src="/assets/img/logo.png" alt="NeuroSinc" class="logo-img">
             </a>
             <nav class="nav-links">
-                <a href="#programs">Programs</a>
-                <a href="#technology">Technology</a>
-                <a href="#how-it-works">How it Works</a>
-                <a href="/guides/">Guides</a>
-                <a href="/contact/">Contact</a>
-                <a href="/es/" class="lang-switch"><span class="lang-flag">🇪🇸</span> ES</a>
+                <a href="#programas">Programas</a>
+                <a href="#tecnologia">Tecnología</a>
+                <a href="#como-funciona">Cómo Funciona</a>
+                <a href="/es/guias/">Guías</a>
+                <a href="/es/contacto/">Contacto</a>
+                <a href="/" class="lang-switch"><span class="lang-flag">🇺🇸</span> EN</a>
             </nav>
-            <button class="hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false"
+            <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú" aria-expanded="false"
                 aria-controls="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -59,13 +45,13 @@
         <!-- Mobile Menu -->
         <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
             <nav class="mobile-nav">
-                <a href="#programs" class="mobile-nav-link">Programs</a>
-                <a href="#technology" class="mobile-nav-link">Technology</a>
-                <a href="#how-it-works" class="mobile-nav-link">How it Works</a>
-                <a href="/guides/" class="mobile-nav-link">Guides</a>
-                <a href="/contact/" class="mobile-nav-link">Contact</a>
-                <a href="/es/" class="mobile-nav-link lang-switch-mobile"><span class="lang-flag">🇪🇸</span> Cambiar a
-                    Español</a>
+                <a href="#programas" class="mobile-nav-link">Programas</a>
+                <a href="#tecnologia" class="mobile-nav-link">Tecnología</a>
+                <a href="#como-funciona" class="mobile-nav-link">Cómo Funciona</a>
+                <a href="/es/guias/" class="mobile-nav-link">Guías</a>
+                <a href="/es/contacto/" class="mobile-nav-link">Contacto</a>
+                <a href="/" class="mobile-nav-link lang-switch-mobile"><span class="lang-flag">🇺🇸</span> Switch to
+                    English</a>
                 <div class="mobile-socials">
                     <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/></svg>
@@ -84,7 +70,7 @@
         </div>
     </header>
 
-    <!-- SECTION 1, HERO -->
+    <!-- SECTION 1 HERO -->
     <section class="hero">
         <div class="container fade-in-up visible" style="max-width: 900px; margin: 0 auto; padding-top: 4rem;">
 
@@ -102,7 +88,7 @@
                         <div style="font-size: 1.5rem; font-weight: 700; color: #fff;">800+</div>
                         <div
                             style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 4px;">
-                            Verified<br>Users</div>
+                            Personas<br>han testeado</div>
                     </div>
                     <svg class="laurel laurel-right" viewBox="0 0 24 44" height="40" fill="currentColor" opacity="0.8"
                         style="color: var(--accent-teal);">
@@ -112,7 +98,7 @@
                 </div>
 
                 <!-- Badge 2 -->
-                <a href="/how-to-lower-cortisol/" class="laurel-badge"
+                <a href="/es/como-bajar-el-cortisol/" class="laurel-badge"
                     style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; cursor: pointer; transition: transform 0.3s; padding: 0.5rem; border-radius: 8px;"
                     onmouseover="this.style.transform='scale(1.05)'; this.style.background='rgba(255,255,255,0.05)'"
                     onmouseout="this.style.transform='scale(1)'; this.style.background='transparent'">
@@ -125,7 +111,7 @@
                         <div style="font-size: 1.5rem; font-weight: 700; color: #fff;">↓ 40%</div>
                         <div
                             style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 4px;">
-                            Cortisol<br>Levels</div>
+                            Niveles<br>de Cortisol</div>
                     </div>
                     <svg class="laurel laurel-right" viewBox="0 0 24 44" height="40" fill="currentColor" opacity="0.8"
                         style="color: var(--accent-teal);">
@@ -142,10 +128,10 @@
                             d="M17.6 42 C11.5 35 7.8 25 9.1 14.5 C7 14.8 5 13 4.2 11.2 C4.9 8.2 8.4 8.7 9.8 11.5 C10.2 8 11 5 13.5 2 C15 3.5 15.5 5.5 14 7 C16.5 6 19 8 18.5 10.5 C16 11 14 9.5 12.5 8 C12 11.5 13 14 16.2 14.8 C18.5 15 19 18 17.5 19.5 C14.2 18.5 13 17 12 15 C11 19 13.5 22 18 22 C20 23 20 26 18 28 C14 26 12 24.5 11 21 C10 26 12.5 30 18 31 C20 32 20 35 18 37 C13 34 11 31 10.5 27 C10 33 13.5 38 18.5 40 Z" />
                     </svg>
                     <div class="badge-content" style="text-align: center; line-height: 1.1;">
-                        <div style="font-size: 1.5rem; font-weight: 700; color: #fff;">+5 Years</div>
+                        <div style="font-size: 1.5rem; font-weight: 700; color: #fff;">+5 Años</div>
                         <div
                             style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 4px;">
-                            R & D</div>
+                            I + D</div>
                     </div>
                     <svg class="laurel laurel-right" viewBox="0 0 24 44" height="40" fill="currentColor" opacity="0.8"
                         style="color: var(--accent-teal);">
@@ -157,84 +143,85 @@
             </div>
 
             <h1 class="text-gradient"
-                style="font-size: clamp(3.2rem, 8vw, 5.5rem); letter-spacing: -0.04em; line-height: 1; margin-bottom: 1.5rem; font-weight: 600;">
-                Silence the mental noise. In minutes.
+                style="font-size: clamp(3.2rem, 8vw, 5.5rem); letter-spacing: -0.05em; line-height: 1; margin-bottom: 1.5rem; font-weight: 600;">
+                Apaga el ruido mental <br> en minutos
             </h1>
 
             <h2 style="font-size: 1.4rem; color: #fff; margin-bottom: 2rem; font-weight: 400; opacity: 0.9;">
-                Reduce your stress. Recover your focus. Wake up rested.
+                Calma el estrés. Recupera tu foco. Despierta descansado.
             </h2>
 
             <p class="subtitle"
                 style="font-size: 1.1rem; color: var(--text-secondary); max-width: 700px; margin: 0 auto 3.5rem auto; line-height: 1.6; font-weight: 400;">
-                You don't have to learn to meditate. You don't have to try harder. Just put on the headphones, and the
-                technology does the rest. Your brain has a silent mode — we built the system to activate it.
+                No tienes que aprender a meditar. No tienes que esforzarte. Solo ponerte los auriculares, y la
+                tecnología hace el resto. Tu cerebro tiene un modo silencio — nosotros diseñamos el sistema para
+                activarlo.
 
             </p>
 
             <div class="hero-cta" style="display: flex; gap: 1.5rem; justify-content: center; align-items: center;">
-                <a href="#try" class="btn btn-primary"
-                    style="padding: 1.1rem 3rem; font-size: 1.05rem; letter-spacing: 0.02em;">Get NeuroSinc</a>
-                <a href="#how-it-works"
+                <a href="#probar" class="btn btn-primary"
+                    style="padding: 1.1rem 3rem; font-size: 1.05rem; letter-spacing: 0.02em;">Adquirir NeuroSinc</a>
+                <a href="#como-funciona"
                     style="color: var(--text-primary); font-weight: 500; font-size: 1rem; border-bottom: 1px solid transparent; padding-bottom: 2px; transition: border-color 0.3s;"
                     onmouseover="this.style.borderBottomColor='var(--text-primary)'"
-                    onmouseout="this.style.borderBottomColor='transparent'">See how it works →</a>
+                    onmouseout="this.style.borderBottomColor='transparent'">Descubre cómo funciona →</a>
             </div>
 
         </div>
     </section>
 
-    <!-- SECTION 2, DISCOVER PLAN -->
-    <section class="modes" id="programs">
+    <!-- SECTION 2 DISCOVER PLAN -->
+    <section class="modes" id="programas">
         <div class="container">
-            <h2 class="section-title text-gradient">Discover your ideal audio session<br><span
-                    style="font-size: 1.25rem; font-weight: 400; color: var(--text-secondary); display: block; margin-top: 1rem;">Choose
-                    your state to begin.</span></h2>
+            <h2 class="section-title text-gradient">Descubre tu sesión de neurosincronización ideal<br><span
+                    style="font-size: 1.25rem; font-weight: 400; color: var(--text-secondary); display: block; margin-top: 1rem;">Elige
+                    tu programa de sonido para comenzar.</span></h2>
 
             <div class="modes-wrapper">
                 <div class="modes-visual">
                     <img src="/assets/img/neurosinc-headphones-relaxation-stress-reduction-closeup.webp"
-                        alt="User experiencing relaxation with NeuroSinc" class="modes-image">
+                        alt="Usuario experimentando relajación con NeuroSinc" class="modes-image">
                 </div>
 
                 <div class="modes-grid" style="margin: 0; width: 100%; max-width: none;">
                     <!-- Calm -->
-                    <a href="/relaxation/" class="mode-card" style="text-decoration:none;">
+                    <a href="/es/audio-relajacion/" class="mode-card" style="text-decoration:none;">
                         <div class="mode-info">
                             <div class="mode-icon">🧘‍♂️</div>
                             <div>
-                                <h3>Calm</h3>
-                                <p>Reduce mental noise and release tension.</p>
+                                <h3>Calma</h3>
+                                <p>Reduce el ruido mental, libera tensión y genera <br> estado de bienestar.</p>
                             </div>
                         </div>
                         <span
-                            style="font-size:0.75rem;color:var(--accent-teal);font-weight:600;letter-spacing:0.05em;">Explore
+                            style="font-size:0.75rem;color:var(--accent-teal);font-weight:600;letter-spacing:0.05em;">Explorar
                             →</span>
                     </a>
                     <!-- Focus -->
-                    <a href="/focus-audio/" class="mode-card active" style="text-decoration:none;">
+                    <a href="/es/audio-foco/" class="mode-card active" style="text-decoration:none;">
                         <div class="mode-info">
                             <div class="mode-icon">🎯</div>
                             <div>
-                                <h3>Focus & productivity</h3>
-                                <p>Enter deep, distraction-free work.</p>
+                                <h3>Foco y productividad</h3>
+                                <p>Entra en trabajo profundo sin distracciones.</p>
                             </div>
                         </div>
                         <span
-                            style="font-size:0.75rem;color:var(--accent-teal);font-weight:600;letter-spacing:0.05em;">Explore
+                            style="font-size:0.75rem;color:var(--accent-teal);font-weight:600;letter-spacing:0.05em;">Explorar
                             →</span>
                     </a>
                     <!-- Sleep -->
-                    <a href="/sleep-audio/" class="mode-card" style="text-decoration:none;">
+                    <a href="/es/audio-sueno/" class="mode-card" style="text-decoration:none;">
                         <div class="mode-info">
                             <div class="mode-icon">🌙</div>
                             <div>
-                                <h3>Deep sleep</h3>
-                                <p>Prepare your mind and body for deeper rest.</p>
+                                <h3>Descanso profundo</h3>
+                                <p>Prepárate para dormir mejor y descansar de verdad.</p>
                             </div>
                         </div>
                         <span
-                            style="font-size:0.75rem;color:var(--accent-teal);font-weight:600;letter-spacing:0.05em;">Explore
+                            style="font-size:0.75rem;color:var(--accent-teal);font-weight:600;letter-spacing:0.05em;">Explorar
                             →</span>
                     </a>
                 </div>
@@ -242,109 +229,114 @@
         </div>
     </section>
 
-    <!-- SECTION 3, SCIENCE / BACKED BY -->
+    <!-- SECTION 3 SCIENCE / BACKED BY -->
     <section class="science-stats">
         <div class="container">
-            <h2 class="section-title text-gradient">It's not just the headphones. It's the entire system.<br><span
-                    style="font-size: 1.1rem; font-weight: 400; color: var(--text-secondary); display: block; margin-top: 1rem; max-width: 800px; margin-inline: auto; line-height: 1.6;">Every
-                    component of the system is designed with a single goal: to guide you into a state of deep calm in minutes. Specialized neuro-synchronization technology, engineered to reduce mental noise, recover your focus, and help you truly rest.</span></h2>
+            <h2 class="section-title text-gradient">No es solo el audífono. Es el sistema completo.<br><span
+                    style="font-size: 1.1rem; font-weight: 400; color: var(--text-secondary); display: block; margin-top: 1rem; max-width: 800px; margin-inline: auto; line-height: 1.6;">
+                    Cada componente del sistema está diseñado para un solo objetivo: llevarte a un estado de calma
+                    profunda en minutos. Tecnología de neurosincronización especializada, diseñada para reducir el ruido
+                    mental, recuperar tu foco y ayudarte a descansar de verdad."</span></h2>
 
             <div class="stats-grid">
                 <div class="stat-card">
                     <h3>5+</h3>
-                    <p>Years of<br>research & development</p>
+                    <p>Años de investigación<br>y desarrollo (I+D)</p>
                 </div>
                 <div class="stat-card">
                     <h3>800+</h3>
-                    <p>Verified users<br>testing the system</p>
+                    <p>Usuarios verificados<br>que probaron el sistema</p>
                 </div>
                 <div class="stat-card">
                     <h3>95%</h3>
-                    <p>Users report better<br>pre-sleep relaxation</p>
+                    <p>De los usuarios reportan<br>mejor relajación pre-sueño</p>
                 </div>
                 <div class="stat-card">
                     <h3>15</h3>
-                    <p>Minutes<br>Daily listen is all it takes</p>
+                    <p>Minutos<br>de escucha diaria bastan</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- SECTION 4 TECHNOLOGY -->
-    <section class="technology" id="technology">
+    <section class="technology" id="tecnologia">
         <div class="container fade-in-up">
-            <h2 class="section-title text-gradient" style="margin-bottom: 0.5rem;">The technology behind NeuroSinc</h2>
+            <h2 class="section-title text-gradient" style="margin-bottom: 0.5rem;">La tecnología detrás de NeuroSinc
+            </h2>
             <p class="subtitle" style="text-align: center; margin-bottom: 3.5rem;">
-                Multimodal neuro-acoustic synchronization: the most direct way to influence your mental state.
+                Neurosincronización sonora multimodal: la forma más directa de influir en tu estado mental.
             </p>
 
             <div class="tech-stack">
                 <div class="tech-layer fade-in-up">
                     <div class="tech-layer-num-v">1</div>
                     <div class="tech-layer-content">
-                        <h3>Rhythmic Foundation</h3>
-                        <p>Initiates neural synchronization.</p>
+                        <h3>Base Rítmica</h3>
+                        <p>Inicia la sincronización.</p>
                     </div>
                 </div>
                 <div class="tech-layer fade-in-up" style="transition-delay: 0.1s">
                     <div class="tech-layer-num-v">2</div>
                     <div class="tech-layer-content">
-                        <h3>Sensory Reinforcement</h3>
-                        <p>Stabilizes mental state.</p>
+                        <h3>Refuerzo Sensorial</h3>
+                        <p>Estabiliza el estado mental.</p>
                     </div>
                 </div>
                 <div class="tech-layer fade-in-up" style="transition-delay: 0.2s">
                     <div class="tech-layer-num-v">3</div>
                     <div class="tech-layer-content">
-                        <h3>Acoustic Environment</h3>
-                        <p>Blocks external interference.</p>
+                        <h3>Entorno Acústico</h3>
+                        <p>Bloquea interferencias externas.</p>
                     </div>
                 </div>
                 <div class="tech-layer fade-in-up" style="transition-delay: 0.3s">
                     <div class="tech-layer-num-v">4</div>
                     <div class="tech-layer-content">
-                        <h3>Physical Response</h3>
-                        <p>Awakens organic relaxation.</p>
+                        <h3>Respuesta Física</h3>
+                        <p>Despierta relajación orgánica.</p>
                     </div>
                 </div>
                 <div class="tech-layer fade-in-up" style="transition-delay: 0.4s">
                     <div class="tech-layer-num-v">5</div>
                     <div class="tech-layer-content">
-                        <h3>3D Immersion</h3>
-                        <p>Maximizes spatial depth.</p>
+                        <h3>Inmersión 3D</h3>
+                        <p>Maximiza la profundidad espacial.</p>
                     </div>
                 </div>
             </div>
 
+            <!-- Cierre potente -->
             <div class="quote-highlight fade-in-up" style="margin-top: 4rem;">
-                NeuroSinc is not just a sound.<br>It's a <strong>complete architecture</strong> integrating 5 layers to take your mind exactly where it needs to be.
+                NeuroSinc no es solo un sonido.<br>Es una <strong>arquitectura completa</strong> de
+                neurosincronización para llevar tu mente a donde necesitas estar.
             </div>
         </div>
     </section>
 
-    <!-- SECTION 5, HOW IT WORKS -->
-    <section class="how-it-works" id="how-it-works"
-        style="background: var(--bg-surface); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <!-- SECTION 5 HOW IT WORKS -->
+    <section class="how-it-works" id="como-funciona"
+        style="background: var(--bg-surface); border-top: 1px solid var(--border-color);">
         <div class="container">
-            <h2 class="section-title text-gradient">How it works?<br><span
-                    style="font-size: 1.25rem; font-weight: 400; color: var(--text-secondary); display: block; margin-top: 1rem;">Three
-                    simple steps to synchronized mental states</span></h2>
+            <h2 class="section-title text-gradient">¿Cómo funciona?<br><span
+                    style="font-size: 1.25rem; font-weight: 400; color: var(--text-secondary); display: block; margin-top: 1rem;">Tres
+                    simples pasos para sincronizar tu estado mental</span></h2>
 
             <div class="steps-container">
                 <div class="step-card">
                     <div class="step-number">1</div>
-                    <h3>Put on your NeuroSinc headphones</h3>
-                    <p>Designed specifically for deep acoustic frequency delivery without distortion.</p>
+                    <h3>Ponte tus audífonos NeuroSinc</h3>
+                    <p>Diseñados específicamente para la entrega de frecuencias acústicas profundas sin distorsión.</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">2</div>
-                    <h3>Choose your state</h3>
-                    <p>Select calm, focus, or sleep based on your current need.</p>
+                    <h3>Elige tu estado</h3>
+                    <p>Selecciona calma, foco o sueño en base a tu necesidad actual.</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">3</div>
-                    <h3>Feel the shift in minutes</h3>
-                    <p>Your brain naturally aligns with the high-fidelity acoustic pattern.</p>
+                    <h3>Siente el cambio en minutos</h3>
+                    <p>Tu cerebro sigue y se adapta al patrón del audio de alta fidelidad de forma natural.</p>
                 </div>
             </div>
         </div>
@@ -353,31 +345,37 @@
     <!-- SECTION 5, TESTIMONIALS -->
     <section class="testimonials">
         <div class="container">
-            <h2 class="section-title text-gradient" style="margin-bottom: 0.5rem;">"It has transformed my... everything"
-            </h2>
+            <h2 class="section-title text-gradient" style="margin-bottom: 0.5rem;">"Ha transformado mi... todo"</h2>
             <div class="stars">★★★★★</div>
-            <p class="review-summary">Over 800 users verified.</p>
+            <p class="review-summary">Más de 800 usuarios verificados.</p>
 
             <div class="quotes-grid">
                 <div class="quote-card">
                     <div class="stars" style="font-size: 1rem; margin-bottom: 0.5rem;">★★★★★</div>
-                    <p>"I've been guiding transpersonal meditation sessions for years. NeuroSinc took me to states I normally only reach in my deepest practices. I didn't expect that."</p>
-                    <p style="color: var(--text-secondary); opacity: 0.8; margin-top: 1rem; font-size: 0.85rem;">— Transpersonal Meditation Instructor</p>
+                    <p>"Llevo años guiando sesiones de meditación transpersonal. NeuroSinc me llevó a estados que
+                        normalmente solo alcanzo en mis prácticas más profundas. No esperaba eso."</p>
+                    <p style="color: var(--text-secondary); opacity: 0.8; margin-top: 1rem; font-size: 0.85rem;">—
+                        Instructora de meditación transpersonal</p>
                 </div>
                 <div class="quote-card">
                     <div class="stars" style="font-size: 1rem; margin-bottom: 0.5rem;">★★★★★</div>
-                    <p>"It's not that I got smarter. It's that I stopped fighting my own mind just to be able to work. Tasks just flowed on their own."</p>
-                    <p style="color: var(--text-secondary); opacity: 0.8; margin-top: 1rem; font-size: 0.85rem;">— Camila R., 31 years old</p>
+                    <p>"No es que me volviera más inteligente. Es que dejé de pelear con mi propia mente para poder
+                        trabajar. Las tareas fluían solas."</p>
+                    <p style="color: var(--text-secondary); opacity: 0.8; margin-top: 1rem; font-size: 0.85rem;">—
+                        Camila R., 31 años</p>
                 </div>
                 <div class="quote-card">
                     <div class="stars" style="font-size: 1rem; margin-bottom: 0.5rem;">★★★★</div>
-                    <p>"I didn't make it to the end of the session. I fell asleep before."</p>
-                    <p style="color: var(--text-secondary); opacity: 0.8; margin-top: 1rem; font-size: 0.85rem;">— Ricardo F., 45 years old</p>
+                    <p>"No llegué al final de la sesión. Me quedé dormido antes."</p>
+                    <p style="color: var(--text-secondary); opacity: 0.8; margin-top: 1rem; font-size: 0.85rem;">—
+                        Ricardo F., 45 años</p>
                 </div>
                 <div class="quote-card">
                     <div class="stars" style="font-size: 1rem; margin-bottom: 0.5rem;">★★★★★</div>
-                    <p>"I felt warmth in my legs. A pleasant heat that traveled upwards. I didn't expect to feel something physical — I thought it was just mental."</p>
-                    <p style="color: var(--text-secondary); opacity: 0.8; margin-top: 1rem; font-size: 0.85rem;">— Paula T., 33 years old</p>
+                    <p>"Sentí calor en las piernas. Un calor agradable que fue subiendo. No esperaba sentir algo físico
+                        — pensé que era solo mental."</p>
+                    <p style="color: var(--text-secondary); opacity: 0.8; margin-top: 1rem; font-size: 0.85rem;">— Paula
+                        T., 33 años</p>
                 </div>
             </div>
         </div>
@@ -386,43 +384,49 @@
     <!-- SECTION 6, FAQ -->
     <section class="faq" id="faq">
         <div class="container">
-            <h2 class="section-title text-gradient">Frequently asked questions</h2>
+            <h2 class="section-title text-gradient">Preguntas Frecuentes</h2>
             <div class="faq-section">
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>Why is the NeuroSinc architecture different?</span>
+                        <span>¿Por qué la arquitectura de NeuroSinc es diferente?</span>
                         <span class="faq-icon">+</span>
                     </div>
                     <div class="faq-answer">
-                        NeuroSinc is a proprietary 5-layer acoustic system. Our immersive frequencies require precise end-to-end delivery that conventional audio cannot guarantee, ensuring stability and depth from the very first minute.
+                        NeuroSinc es un sistema acústico de 5 capas. Nuestras frecuencias inmersivas requieren una
+                        entrega de extremo a extremo que el audio convencional no puede garantizar, asegurando
+                        estabilidad y profundidad desde el primer minuto.
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>What is NeuroSinc?</span>
+                        <span>¿Qué es NeuroSinc?</span>
                         <span class="faq-icon">+</span>
                     </div>
                     <div class="faq-answer">
-                        NeuroSinc is a complete hardware and immersive acoustic system that uses advanced neuro-acoustic stimulation to guide your brain into states of focus, calm, or deep rest.
+                        NeuroSinc es un sistema completo de hardware y audio neuroacústico que utiliza frecuencias de
+                        sonido específicas para guiar tu cerebro hacia estados de concentración, calma o descanso
+                        profundo.
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>How long should I listen?</span>
+                        <span>¿Cuánto tiempo debo escuchar?</span>
                         <span class="faq-icon">+</span>
                     </div>
                     <div class="faq-answer">
-                        We recommend sessions of 15-30 minutes, depending on the state you want to achieve. Most users
-                        notice the effects within the first 10 minutes.
+                        Recomendamos sesiones de 15 a 30 minutos, dependiendo del estado que desees alcanzar. La mayoría
+                        nota los efectos dentro de los primeros 10 minutos.
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>Are there any side effects?</span>
+                        <span>¿Existen efectos secundarios?</span>
                         <span class="faq-icon">+</span>
                     </div>
                     <div class="faq-answer">
-                        Our audio sessions are completely natural and safe. However, if you have severe hearing issues, or a history of seizures or epilepsy, you should consult a doctor before using neuro-acoustic stimulation.
+                        Nuestras sesiones de audio son completamente naturales y seguras. Sin embargo, si tienes
+                        problemas auditivos severos, historial de convulsiones o epilepsia, debes consultar a un médico
+                        antes de usar estimulación neuroacústica.
                     </div>
                 </div>
             </div>
