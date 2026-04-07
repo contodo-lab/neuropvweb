@@ -524,6 +524,17 @@ section {
     }
 }
 
+@media (min-width: 641px) {
+    .ks-badge {
+        gap: 0.825rem;
+        padding: 0.715rem 1.375rem 0.715rem 0.935rem;
+        font-size: 0.858rem;
+    }
+    .ks-logo {
+        height: 19.8px;
+    }
+}
+
 /* Modes Grid / Binaural Beats Plan Section */
 .modes {
     background: var(--bg-surface);
