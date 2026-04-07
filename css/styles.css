@@ -470,6 +470,60 @@ section {
     }
 }
 
+/* Kickstarter Floating Badge */
+.ks-badge {
+    position: absolute;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.65rem 1.25rem 0.65rem 0.85rem;
+    background: #222222;
+    border: 1px solid rgba(5, 206, 120, 0.5);
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5), 0 0 0 0 rgba(5, 206, 120, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    animation: ks-pulse 3.5s ease-in-out infinite;
+    cursor: default;
+    white-space: nowrap;
+}
+
+.ks-badge:hover {
+    transform: translateY(-3px);
+    border-color: #05CE78;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 20px rgba(5, 206, 120, 0.25);
+}
+
+.ks-logo {
+    height: 18px;
+    width: auto;
+    flex-shrink: 0;
+    display: block;
+}
+
+@keyframes ks-pulse {
+    0%, 100% { box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5), 0 0 0px rgba(5, 206, 120, 0); }
+    50%       { box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5), 0 0 18px rgba(5, 206, 120, 0.3); }
+}
+
+@media (max-width: 640px) {
+    .ks-badge {
+        bottom: 1.5rem;
+        right: 50%;
+        transform: translateX(50%);
+    }
+    .ks-badge:hover {
+        transform: translateX(50%) translateY(-3px);
+    }
+}
+
 /* Modes Grid / Binaural Beats Plan Section */
 .modes {
     background: var(--bg-surface);

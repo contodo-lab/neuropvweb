@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://neurosinc.com/</loc>
-    <lastmod>2026-04-01</lastmod>
+    <lastmod>2026-04-02</lastmod>
   </url>
   <url>
     <loc>https://neurosinc.com/contact/</loc>
@@ -15,6 +15,14 @@
   <url>
     <loc>https://neurosinc.com/sleep-audio/</loc>
     <lastmod>2026-04-01</lastmod>
+  </url>
+  <url>
+    <loc>https://neurosinc.com/privacy/</loc>
+    <lastmod>2026-04-02</lastmod>
+  </url>
+  <url>
+    <loc>https://neurosinc.com/terms/</loc>
+    <lastmod>2026-04-02</lastmod>
   </url>
   <url>
     <loc>https://neurosinc.com/relaxation/</loc>
@@ -46,11 +54,11 @@
   </url>
   <url>
     <loc>https://neurosinc.com/how-to-lower-cortisol/</loc>
-    <lastmod>2026-04-01</lastmod>
+    <lastmod>2026-04-02</lastmod>
   </url>
   <url>
     <loc>https://neurosinc.com/es/</loc>
-    <lastmod>2026-04-01</lastmod>
+    <lastmod>2026-04-02</lastmod>
   </url>
   <url>
     <loc>https://neurosinc.com/es/guias/</loc>
@@ -82,11 +90,19 @@
   </url>
   <url>
     <loc>https://neurosinc.com/es/como-bajar-el-cortisol/</loc>
-    <lastmod>2026-04-01</lastmod>
+    <lastmod>2026-04-02</lastmod>
   </url>
   <url>
     <loc>https://neurosinc.com/es/audio-sueno/</loc>
     <lastmod>2026-04-01</lastmod>
+  </url>
+  <url>
+    <loc>https://neurosinc.com/es/terminos/</loc>
+    <lastmod>2026-04-02</lastmod>
+  </url>
+  <url>
+    <loc>https://neurosinc.com/es/privacidad/</loc>
+    <lastmod>2026-04-02</lastmod>
   </url>
   <url>
     <loc>https://neurosinc.com/es/audio-foco/</loc>
