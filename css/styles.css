@@ -383,6 +383,18 @@ section {
     border-color: rgba(255, 255, 255, 0.2);
 }
 
+.btn-teal {
+    background-color: var(--accent-teal);
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 194, 178, 0.25);
+}
+
+.btn-teal:hover {
+    background-color: #00d4c2;
+    transform: translateY(-2px);
+    box-shadow: 0 0 36px rgba(0, 194, 178, 0.45);
+}
+
 /* Hero Section */
 .hero {
     min-height: 100vh;
