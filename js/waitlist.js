@@ -159,6 +159,10 @@
             <h2 class="wl-title">${c.step2Title}</h2>
             <p class="wl-sub">${c.step2Sub}</p>
             <form class="wl-form" id="wl-form" novalidate>
+                <!-- Honeypot: hidden from real users, bots will fill it -->
+                <div style="position:absolute;left:-9999px;height:0;overflow:hidden;" aria-hidden="true">
+                    <input type="text" name="website" id="wl-honeypot" tabindex="-1" autocomplete="off">
+                </div>
                 <div class="wl-input-wrap">
                     <input class="wl-input" id="wl-name" type="text" placeholder="${c.namePlaceholder}" autocomplete="given-name" required aria-label="${c.namePlaceholder}">
                 </div>
@@ -217,10 +221,12 @@
 
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
-            const nameInput  = form.querySelector('#wl-name');
-            const emailInput = form.querySelector('#wl-email');
-            const name       = nameInput.value.trim();
-            const email      = emailInput.value.trim();
+            const nameInput     = form.querySelector('#wl-name');
+            const emailInput    = form.querySelector('#wl-email');
+            const honeypotInput = form.querySelector('#wl-honeypot');
+            const name          = nameInput.value.trim();
+            const email         = emailInput.value.trim();
+            const website       = honeypotInput ? honeypotInput.value : '';
 
             // Validate name
             if (!name) {
@@ -246,7 +252,7 @@
                 const resp = await fetch('https://divine-sea-84d1.contodoenpv.workers.dev/', {
                     method:  'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body:    JSON.stringify({ name, email, painPoint: selectedCategory }),
+                    body:    JSON.stringify({ name, email, painPoint: selectedCategory, website }),
                 });
 
                 if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
