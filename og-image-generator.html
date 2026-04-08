@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OG Image Generator - NeuroSinc</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #2a2a2a;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Outfit', sans-serif;
+            padding: 2rem;
+        }
+
+        .instructions {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .instructions h2 {
+            margin-bottom: 0.5rem;
+        }
+
+        .instructions p {
+            color: #555;
+        }
+
+        /* Exactly 1200x630 for perfect Open Graph / Twitter Card sharing */
+        .og-image-container {
+            width: 1200px;
+            height: 630px;
+            position: relative;
+            background-color: #0B0B0B;
+            /* Update path if needed, usually open this file from the project root */
+            background-image: url('assets/img/hero-bg.png');
+            background-size: cover;
+            background-position: center bottom;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #EAEAEA;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .og-image-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, rgba(11, 11, 11, 0.4) 0%, rgba(11, 11, 11, 0.95) 100%);
+            z-index: 1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            max-width: 950px;
+        }
+
+        .logo {
+            height: 130px;
+            margin-bottom: 1rem;
+        }
+
+        .title {
+            font-size: 5rem;
+            font-weight: 600;
+            line-height: 1.1;
+            letter-spacing: -0.04em;
+            background: linear-gradient(135deg, #FFFFFF 0%, #A0A0A0 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-wrap: balance;
+        }
+
+        .subtitle {
+            font-size: 2rem;
+            font-weight: 400;
+            color: #d1d1d1;
+            margin-bottom: 1rem;
+        }
+
+        .ks-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 2rem;
+            background: #222222;
+            border: 2px solid rgba(5, 206, 120, 0.5);
+            border-radius: 999px;
+            font-size: 1.25rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            color: #FFFFFF;
+            text-transform: uppercase;
+        }
+
+        .ks-badge img {
+            height: 28px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="instructions">
+        <h2>OG Image Ready for Screenshot📸</h2>
+        <p>The dark rectangle below is exactly <strong>1200x630</strong> pixels.<br>Take a precise screenshot of it,
+            save as <code>og-image.jpg</code> and place it in your folder.</p>
+    </div>
+
+    <!-- 1200x630 container -->
+    <div class="og-image-container">
+        <div class="content">
+            <!-- Ensure path points to your actual logo -->
+            <img src="/assets/img/logo-icon.png" alt="NeuroSinc Logo" class="logo">
+
+            <h1 class="title">Silence the mental noise. In minutes.</h1>
+            <h2 class="subtitle">Reduce your stress. Recover your focus. Wake up rested.</h2>
+
+            <div class="ks-badge">
+                <span>Coming Soon to</span>
+                <img src="assets/img/kickstarter-logo-green.avif" alt="Kickstarter">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
