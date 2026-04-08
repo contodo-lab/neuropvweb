@@ -111,33 +111,29 @@
             <span>Coming Soon to</span>
             <img src="/assets/img/kickstarter-logo-green.avif" alt="Kickstarter" class="ks-logo">
         </div>
-        <div class="container fade-in-up visible" style="max-width: 900px; margin: 0 auto; padding-top: 4rem;">
+        <div class="container fade-in-up visible" style="max-width: 900px; margin: 0 auto; padding-top: 1rem;">
 
-            <div
-                style="display: flex; align-items: center; justify-content: center; gap: 2rem; margin-bottom: 3rem; flex-wrap: wrap;">
-                <div style="display: flex; align-items: center; gap: 0.5rem;">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-teal)"
+            <div class="hero-eyebrows">
+                <div class="hero-eyebrow-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-teal)"
                         stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
-                    <span style="font-size: 0.95rem; font-weight: 500; color: var(--text-secondary);">800+ Verified
-                        Users</span>
+                    <span class="hero-eyebrow-text">800+ Verified Users</span>
                 </div>
-                <div style="display: flex; align-items: center; gap: 0.5rem;">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-teal)"
+                <div class="hero-eyebrow-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-teal)"
                         stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
-                    <span style="font-size: 0.95rem; font-weight: 500; color: var(--text-secondary);">95% report deep
-                        relaxation</span>
+                    <span class="hero-eyebrow-text">95% report deep relaxation</span>
                 </div>
-                <div style="display: flex; align-items: center; gap: 0.5rem;">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-teal)"
+                <div class="hero-eyebrow-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-teal)"
                         stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
-                    <span style="font-size: 0.95rem; font-weight: 500; color: var(--text-secondary);">5+ Years
-                        R&D</span>
+                    <span class="hero-eyebrow-text">5+ Years R&D</span>
                 </div>
             </div>
 
@@ -160,7 +156,7 @@
             <div class="hero-cta" style="display: flex; gap: 1.5rem; justify-content: center; align-items: center;">
                 <button type="button" data-waitlist class="btn btn-teal"
                     style="padding: 1.1rem 3rem; font-size: 1.05rem; letter-spacing: 0.02em;">Join the Waitlist</button>
-                <a href="#how-it-works"
+                <a href="#" class="open-video-modal"
                     style="color: var(--text-primary); font-weight: 500; font-size: 1rem; border-bottom: 1px solid transparent; padding-bottom: 2px; transition: border-color 0.3s;"
                     onmouseover="this.style.borderBottomColor='var(--text-primary)'"
                     onmouseout="this.style.borderBottomColor='transparent'">See how it works →</a>
@@ -455,6 +451,16 @@
             </div>
         </div>
     </section>
+
+    <!-- Video Modal -->
+    <div class="video-modal-overlay" id="video-modal">
+        <div class="video-modal-container">
+            <button class="video-modal-close" id="video-modal-close" aria-label="Close video">×</button>
+            <div class="video-modal-aspect-ratio">
+                <iframe id="video-modal-iframe" src="" allow="autoplay; fullscreen; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
 
     <!-- FOOTER -->
     <div id="site-footer"></div>

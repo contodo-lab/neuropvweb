@@ -73,4 +73,49 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Video Modal Logic
+    const videoModal = document.getElementById('video-modal');
+    const openVideoBtns = document.querySelectorAll('.open-video-modal');
+    const closeVideoBtn = document.getElementById('video-modal-close');
+    const videoIframe = document.getElementById('video-modal-iframe');
+    
+    // YOUTUBE VIDEO ID
+    // Uses different video IDs based on the page language
+    const pageLang = document.documentElement.lang;
+    const youtubeVideoId = pageLang === 'es' ? '1exSqWQZlOk' : 'S0ErOhZ0jTw'; 
+
+    if (videoModal && openVideoBtns.length > 0 && closeVideoBtn && videoIframe) {
+        openVideoBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                videoModal.style.display = 'flex';
+                // Small delay to allow display flex to apply before adding opacity class
+                setTimeout(() => videoModal.classList.add('is-active'), 10);
+                videoIframe.src = `https://www.youtube.com/embed/${youtubeVideoId}?autoplay=1&rel=0`;
+            });
+        });
+
+        const closeVideoModal = () => {
+            videoModal.classList.remove('is-active');
+            setTimeout(() => {
+                videoModal.style.display = 'none';
+                videoIframe.src = ''; // Stop video on close
+            }, 300);
+        };
+
+        closeVideoBtn.addEventListener('click', closeVideoModal);
+        
+        videoModal.addEventListener('click', (e) => {
+            if (e.target === videoModal) {
+                closeVideoModal();
+            }
+        });
+        
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && videoModal.classList.contains('is-active')) {
+                closeVideoModal();
+            }
+        });
+    }
 });
