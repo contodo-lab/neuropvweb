@@ -85,7 +85,7 @@
             letter-spacing: -.04em;
             line-height: 1.05;
             max-width: 800px;
-            margin: 0 auto 1.5rem;
+            margin: 0 auto 0.5rem;
         }
 
         .ca-hero-sub {
@@ -112,22 +112,23 @@
 
         .wave-divider {
             width: 100%;
-            margin-top: 4rem;
+            margin-bottom: 1.5rem;
         }
 
         .wave-svg {
             width: 100%;
-            height: 80px;
+            height: 60px;
             display: block;
+            overflow: visible;
         }
 
         .wave-path-calm {
             stroke: var(--calm-accent);
-            stroke-width: 1;
+            stroke-width: 1.5;
             fill: none;
-            opacity: .2;
-            stroke-dasharray: 1200;
-            stroke-dashoffset: 1200;
+            opacity: .23;
+            stroke-dasharray: 2600;
+            stroke-dashoffset: 2600;
             animation: wave-draw-calm 6s ease-out forwards, calm-pulse 8s ease-in-out 6s infinite;
         }
 
@@ -141,11 +142,11 @@
 
             0%,
             100% {
-                opacity: .12;
+                opacity: .14;
             }
 
             50% {
-                opacity: .28;
+                opacity: .32;
             }
         }
 
@@ -583,6 +584,17 @@
         <div class="ca-hero-inner">
             <div class="ca-hero-badge">🍃 Calma Mental · NeuroSinc</div>
             <h1 class="text-gradient">Silencia tu mente<br>en minutos</h1>
+            <div class="wave-divider">
+                <svg class="wave-svg" viewBox="0 0 1200 80" preserveAspectRatio="none">
+                    <path class="wave-path-calm"
+                        d="M0,40 C100,30 200,50 300,40 C400,30 500,50 600,40 C700,30 800,50 900,40 C1000,30 1100,50 1200,40">
+                        <animate attributeName="d" dur="5s"
+                            values="M0,40 C100,-40 200,120 300,40 C400,-60 500,140 600,40 C700,-50 800,130 900,40 C1000,-40 1100,120 1200,40; M0,40 C100,0 200,80 300,40 C400,-10 500,90 600,40 C700,0 800,80 900,40 C1000,10 1100,70 1200,40; M0,40 C100,30 200,50 300,40 C400,30 500,50 600,40 C700,30 800,50 900,40 C1000,30 1100,50 1200,40"
+                            keyTimes="0; 0.4; 1" calcMode="spline" keySplines="0.25 0.1 0.25 1; 0.25 0.1 0.25 1"
+                            fill="freeze" />
+                    </path>
+                </svg>
+            </div>
             <p class="ca-hero-sub">Audio diseñado para ayudarte a salir del ruido mental y entrar en un estado más
                 calmado</p>
             <p class="ca-hero-support">Sesiones de 15–30 minutos &nbsp;·&nbsp; Incluye hardware NeuroSinc</p>
@@ -590,9 +602,6 @@
                 <a href="/#programas" class="btn btn-primary">Prueba una sesión de calma</a>
                 <a href="/#programas" class="btn btn-secondary">Escuchar una demo</a>
             </div>
-            <div class="wave-divider"><svg class="wave-svg" viewBox="0 0 1200 80" preserveAspectRatio="none">
-                    <path class="wave-path-calm" d="M0,40 C200,15 400,65 600,40 C800,15 1000,65 1200,40" />
-                </svg></div>
         </div>
     </section>
 
@@ -745,9 +754,72 @@
 
     <section class="ca-section ca-section-alt">
         <div class="container">
-            <div class="ca-science-box fade-in-up"><span class="ca-label" style="display:block;margin-bottom:1.5rem;">Arquitectura Multimodal</span>
-                <p>El Programa de Calma utiliza una <strong>arquitectura acústica de 5 capas</strong> diseñada para la descompresión mental.</p>
-                <p style="margin-top:1.25rem;">Nuestras composiciones inmersivas guían tu cerebro para cambiar de forma fluida desde un estado de hiperactividad hacia una calma absoluta y orgánica.</p><span class="ca-disclaimer-pill">No es un dispositivo médico · No trata trastornos crónicos o de ansiedad · Los resultados pueden variar</span>
+            <div class="ca-science-box fade-in-up">
+                <span class="ca-label" style="display:block;margin-bottom:1.5rem;">Arquitectura Multimodal</span>
+                <p>El Programa de Calma utiliza una <strong>arquitectura acústica de 5 capas</strong> diseñada para la
+                    descompresión mental.</p>
+                <div
+                    style="margin-top:2rem;display:flex;flex-direction:column;gap:1.5rem;text-align:left;max-width:520px;margin-inline:auto;">
+                    <div style="display:flex;gap:1.25rem;align-items:flex-start;">
+                        <span
+                            style="font-size:2rem;font-weight:800;color:rgba(110,231,183,.12);flex-shrink:0;line-height:1;min-width:2rem;">1</span>
+                        <div>
+                            <p style="font-size:1rem;color:var(--text-primary);font-weight:500;margin:0 0 .3rem;">Tu
+                                mente empieza a desacelerarse.</p>
+                            <p
+                                style="font-size:.72rem;color:var(--calm-accent);text-transform:uppercase;letter-spacing:.11em;font-weight:700;margin:0;">
+                                Base Rítmica</p>
+                        </div>
+                    </div>
+                    <div style="display:flex;gap:1.25rem;align-items:flex-start;">
+                        <span
+                            style="font-size:2rem;font-weight:800;color:rgba(110,231,183,.12);flex-shrink:0;line-height:1;min-width:2rem;">2</span>
+                        <div>
+                            <p style="font-size:1rem;color:var(--text-primary);font-weight:500;margin:0 0 .3rem;">Los
+                                pensamientos acelerados comienzan a calmarse.</p>
+                            <p
+                                style="font-size:.72rem;color:var(--calm-accent);text-transform:uppercase;letter-spacing:.11em;font-weight:700;margin:0;">
+                                Refuerzo Sensorial</p>
+                        </div>
+                    </div>
+                    <div style="display:flex;gap:1.25rem;align-items:flex-start;">
+                        <span
+                            style="font-size:2rem;font-weight:800;color:rgba(110,231,183,.12);flex-shrink:0;line-height:1;min-width:2rem;">3</span>
+                        <div>
+                            <p style="font-size:1rem;color:var(--text-primary);font-weight:500;margin:0 0 .3rem;">El
+                                mundo exterior se desvanece.</p>
+                            <p
+                                style="font-size:.72rem;color:var(--calm-accent);text-transform:uppercase;letter-spacing:.11em;font-weight:700;margin:0;">
+                                Entorno Acústico</p>
+                        </div>
+                    </div>
+                    <div style="display:flex;gap:1.25rem;align-items:flex-start;">
+                        <span
+                            style="font-size:2rem;font-weight:800;color:rgba(110,231,183,.12);flex-shrink:0;line-height:1;min-width:2rem;">4</span>
+                        <div>
+                            <p style="font-size:1rem;color:var(--text-primary);font-weight:500;margin:0 0 .3rem;">Tu
+                                cuerpo se relaja y libera la tensión.</p>
+                            <p
+                                style="font-size:.72rem;color:var(--calm-accent);text-transform:uppercase;letter-spacing:.11em;font-weight:700;margin:0;">
+                                Respuesta Física</p>
+                        </div>
+                    </div>
+                    <div style="display:flex;gap:1.25rem;align-items:flex-start;">
+                        <span
+                            style="font-size:2rem;font-weight:800;color:rgba(110,231,183,.12);flex-shrink:0;line-height:1;min-width:2rem;">5</span>
+                        <div>
+                            <p style="font-size:1rem;color:var(--text-primary);font-weight:500;margin:0 0 .3rem;">Te
+                                sientes completamente envuelto en calma.</p>
+                            <p
+                                style="font-size:.72rem;color:var(--calm-accent);text-transform:uppercase;letter-spacing:.11em;font-weight:700;margin:0;">
+                                Inmersión 3D</p>
+                        </div>
+                    </div>
+                </div>
+                <p style="margin-top:2rem;">Nuestras composiciones inmersivas guían tu cerebro para cambiar de forma
+                    fluida desde un estado de hiperactividad hacia una calma absoluta y orgánica.</p>
+                <span class="ca-disclaimer-pill">No es un dispositivo médico · No trata trastornos crónicos o de
+                    ansiedad · Los resultados pueden variar</span>
             </div>
         </div>
     </section>
@@ -765,8 +837,8 @@
     <section class="ca-internal-links">
         <div class="container">
             <p class="ca-links-label">Explorar otros estados</p>
-            <div class="ca-links-grid"><a href="/es/audio-foco/" class="ca-link-card"><span>🎯</span> Mejorar el foco</a><a
-                    href="/es/audio-sueno/" class="ca-link-card"><span>🌙</span> Dormir mejor</a><a href="/"
+            <div class="ca-links-grid"><a href="/es/audio-foco/" class="ca-link-card"><span>🎯</span> Mejorar el
+                    foco</a><a href="/es/audio-sueno/" class="ca-link-card"><span>🌙</span> Dormir mejor</a><a href="/"
                     class="ca-link-card"><span>↩</span> Volver a NeuroSinc</a></div>
         </div>
     </section>
