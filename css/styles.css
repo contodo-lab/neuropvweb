@@ -1567,9 +1567,8 @@ section {
 .video-modal-overlay {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    /* Use a solid dark opacity instead of backdrop-filter to prevent hardware decoding frame drops */
+    background: rgba(0, 0, 0, 0.95);
     z-index: 9999;
     display: none;
     align-items: center;
@@ -1589,7 +1588,7 @@ section {
     max-width: 900px;
     background: #000;
     border-radius: 12px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    /* Remove heavy box shadow to improve GPU performance on mobile */
     overflow: hidden;
     transform: scale(0.95);
     transition: transform 0.3s ease;

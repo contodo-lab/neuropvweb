@@ -82,9 +82,29 @@
             max-width: 950px;
         }
 
-        .logo {
-            height: 130px;
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
             margin-bottom: 1rem;
+        }
+
+        .logo {
+            height: 75px;
+        }
+
+        .logo-text {
+            font-size: 3.15rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+        }
+
+        .text-neuro {
+            color: #3172B7; /* Blue */
+        }
+
+        .text-sinc {
+            color: #34B9A7; /* Teal */
         }
 
         .title {
@@ -138,7 +158,12 @@
     <div class="og-image-container">
         <div class="content">
             <!-- Ensure path points to your actual logo -->
-            <img src="/assets/img/logo-icon.png" alt="NeuroSinc Logo" class="logo">
+            <div class="logo-container">
+                <img src="assets/img/logo-icon.png" alt="NeuroSinc Logo" class="logo">
+                <div class="logo-text">
+                    <span class="text-neuro">Neuro</span><span class="text-sinc">Sinc</span>
+                </div>
+            </div>
 
             <h1 class="title">Silence the mental noise. In minutes.</h1>
             <h2 class="subtitle">Reduce your stress. Recover your focus. Wake up rested.</h2>
