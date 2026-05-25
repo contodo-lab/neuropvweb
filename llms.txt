@@ -1,0 +1,25 @@
+# NeuroSinc
+
+NeuroSinc is a hardware and software system -- specialized headphones with integrated multimodal neuro-synchronization technology designed to help people reach states of calm, deep sleep, or focused attention. Sessions last 15 to 30 minutes. No effort or practice required from the user.
+
+## Programs
+
+- Sleep: designed to help the brain wind down and transition into sleep
+- Calm: designed to reduce feelings of stress and mental overactivity
+- Focus: designed to support sustained attention and mental clarity
+
+## Technology
+
+The system combines binaural beats, monaural pulses, isochronic tones, ASMR, and 3D spatial sound in a single integrated session. Hardware and software are inseparable -- this is not an app or a streaming service.
+
+## Testing
+
+Developed over 5 years of R&D. Tested with 800+ participants. 95% reported deep relaxation after their first session (internal testing).
+
+## Status
+
+Pre-launch. Kickstarter campaign forthcoming. Waitlist available at neurosinc.com.
+
+## Contact
+
+neurosinc.com/contact
