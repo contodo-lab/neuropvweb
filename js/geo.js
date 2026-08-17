@@ -12,6 +12,13 @@
  * free, no third-party API, no rate limit. Both domains already sit behind CF.
  *
  * Escape hatches: ?nogeo=1 (permanent opt-out) and the banner's dismiss button.
+ *
+ * WORKING ON THE SITE FROM CHILE
+ *   Opt out:  load any page once with ?nogeo=1 — persists in localStorage.
+ *   Undo it:  localStorage.removeItem('ns-geo-optout'); sessionStorage.clear();
+ *   (sessionStorage holds the cached country + banner-dismissed flag, so clear
+ *    both for a true first-time-visitor test.)
+ *   See CHANGELOG.md → "Pinned: working on the site from Chile".
  */
 (function () {
     var CL_SITE       = 'https://neurosinc.cl/';
