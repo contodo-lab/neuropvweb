@@ -65,8 +65,10 @@
         if (country !== 'CL') { languageRouting(country); return; }
 
         if (isHome) {
-            // ref=com lets the .cl side attribute this traffic in analytics.
-            window.location.replace(CL_SITE + '?ref=com');
+            // from=com lets the .cl side attribute this traffic in analytics.
+            // NOT ?ref= — that key is sales-agent attribution on .cl and any
+            // value lands in ns_agent_code / the checkout vendor field.
+            window.location.replace(CL_SITE + '?from=com');
             return;
         }
         showBanner();
@@ -121,7 +123,7 @@
         label.textContent = '🇨🇱 ' + copy.text;
 
         var link = document.createElement('a');
-        link.href = CL_SITE + '?ref=com-banner';
+        link.href = CL_SITE + '?from=com-banner';   // see note on ?ref= above
         link.textContent = copy.cta;
         link.style.cssText = [
             'display:inline-block', 'padding:0.35rem 0.9rem', 'border-radius:999px',

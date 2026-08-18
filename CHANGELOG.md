@@ -52,6 +52,40 @@ page, just navigate to `/` again in the same tab.
 
 ---
 
+## 2026-08-18 — Geo handoff tag changed from `?ref=` to `?from=`
+**Commit:** _(pending)_
+
+**Problem** — the geo redirect handed traffic to `neurosinc.cl/?ref=com`, but `?ref=`
+is already **sales-agent attribution** on the .cl side: its `layout.js` reads `ref`,
+uppercases it, and stores it as `ns_agent_code`, which then pre-fills the vendor field
+at checkout and rides onto the order. So every Chilean visitor redirected from .com was
+being credited to a non-existent sales agent called `COM` — and the non-home banner link
+(`?ref=com-banner`) was doing the same thing under a second fake code. Agent
+attribution data on .cl has been quietly polluted since the redirect went live.
+
+**Change** — switched both handoff links to the `?from=` key, which .cl does not read
+for attribution. The com / com-banner distinction is preserved for analytics.
+
+**Files** — `js/geo.js:71` (homepage redirect), `js/geo.js:126` (banner CTA link).
+
+**Verified** — `grep` confirms no `?ref=` remains anywhere in the repo; these two lines
+were the only places it was emitted. `node --check js/geo.js` passes.
+
+**Open** — two follow-ups on the **.cl** side (separate repo, being handled there):
+1. A guard so a stray `ref=com` / `ref=com-banner` is ignored rather than stored as an
+   agent code. Still needed after this change, because bookmarks, cached pages and
+   already-indexed links will keep arriving with the old `?ref=` for a while.
+2. An arrival toast keyed on `?from=com` — "te llevamos a nuestra tienda en Chile,
+   ¿buscabas el sitio global?" — with a link back to `neurosinc.com/?nogeo=1`. This
+   replaces the idea of a blocking "estás siendo redirigido" interstitial on .com,
+   which would have added friction to the highest-intent traffic and risked Google's
+   intrusive-interstitial penalty. The way back matters because the redirect uses
+   `location.replace()`, so the back button will not return them to .com.
+3. Any existing `ns_agent_code` values of `COM` / `COM-BANNER` already in customers'
+   localStorage — and any orders already tagged with them — may need cleaning up.
+
+---
+
 ## 2026-08-17 — Chilean visitors on .com now reach the .cl store
 **Commit:** `9748922` "changes to geolocal"
 
